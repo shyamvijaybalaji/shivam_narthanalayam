@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  /* Maroon Primary Colors */
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fde8e8;
+  --color-primary-200: #fbd5d5;
+  --color-primary-300: #f8b4b4;
+  --color-primary-400: #f27272;
+  --color-primary-500: #e74c3c;
+  --color-primary-600: #800020;
+  --color-primary-700: #6b001a;
+  --color-primary-800: #590016;
+  --color-primary-900: #4a0012;
+  --color-primary-950: #2d000b;
+
+  /* Brown Secondary Colors */
+  --color-secondary-50: #faf8f5;
+  --color-secondary-100: #f5f0ea;
+  --color-secondary-200: #e8ddd0;
+  --color-secondary-300: #d4c4ab;
+  --color-secondary-400: #b89d76;
+  --color-secondary-500: #9f7d52;
+  --color-secondary-600: #654321;
+  --color-secondary-700: #54371c;
+  --color-secondary-800: #442d17;
+  --color-secondary-900: #382614;
+  --color-secondary-950: #1f150b;
+
+  /* Gold Accent */
+  --color-accent-400: #ffd966;
+  --color-accent-500: #FFD700;
+  --color-accent-600: #d4af37;
+  --color-accent-700: #b8960c;
+
+  /* Cream Background */
+  --color-cream-50: #fffef9;
+  --color-cream-100: #fffcf0;
+  --color-cream-200: #FFF8DC;
+  --color-cream-300: #fef3c7;
+
+  /* Traditional Text Colors */
+  --color-brown-text: #3E2723;
+
+  --font-family-sans: 'Lora', 'Georgia', serif;
+  --font-family-display: 'Playfair Display', 'Georgia', serif;
+}
+
+@source "../../node_modules/@tailwindcss/forms";
+@source "../../node_modules/@tailwindcss/typography";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream-200 antialiased;
+  color: var(--color-brown-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+  font-family: var(--font-family-display);
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary-600 text-base font-medium rounded-lg text-primary-600 bg-transparent hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200;
+}
+
+.section-padding {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+}
+
+.input-field {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 transition-colors;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4;
+}
+
+.section-subtitle {
+  @apply text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600;
+}
+
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700;
+}
+
+.bg-gradient-secondary {
+  @apply bg-gradient-to-r from-secondary-600 to-secondary-700;
+}
+
+/* Traditional Design Elements */
+.traditional-border {
+  border-image: linear-gradient(90deg,
+    var(--color-accent-500) 0%,
+    var(--color-primary-600) 50%,
+    var(--color-accent-500) 100%) 1;
+}
+
+.traditional-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+  border-top: 3px solid var(--color-accent-500);
+}
+
+.ornate-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.ornate-heading::before,
+.ornate-heading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-500));
+}
+
+.ornate-heading::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.ornate-heading::after {
+  left: 100%;
+  margin-left: 15px;
+  background: linear-gradient(90deg, var(--color-accent-500), transparent);
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
