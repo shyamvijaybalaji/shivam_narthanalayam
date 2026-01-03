@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - PUBLIC_SUPABASE_URL=${PUBLIC_SUPABASE_URL}
+      - PUBLIC_SUPABASE_ANON_KEY=${PUBLIC_SUPABASE_ANON_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - PUBLIC_SITE_URL=${PUBLIC_SITE_URL}
+      - PUBLIC_SITE_NAME=${PUBLIC_SITE_NAME}
+      - PUBLIC_PHONE=${PUBLIC_PHONE}
+      - PUBLIC_EMAIL=${PUBLIC_EMAIL}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
