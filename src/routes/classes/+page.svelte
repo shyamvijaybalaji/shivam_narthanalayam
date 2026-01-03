@@ -26,14 +26,14 @@
 </section>
 
 <!-- Offline Classes -->
-<section class="section-padding bg-white">
+<section class="section-padding bg-black">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto">
       <div class="traditional-card p-8 mb-8">
-        <h2 class="text-3xl font-bold mb-6" style="color: var(--color-primary-600);">Offline Group Classes</h2>
+        <h2 class="text-3xl font-bold mb-6" style="color: var(--color-accent-400);">Offline Group Classes</h2>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--color-secondary-600);">📍 Location</h3>
+          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">📍 Location</h3>
           <p class="mb-2">Little Millennium Play School, Pudur, Chennai 600053</p>
           <a href="https://maps.app.goo.gl/2Ed8vJet8DTRBzR67" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 underline">
             View on Google Maps →
@@ -41,10 +41,10 @@
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-3" style="color: var(--color-secondary-600);">📅 Class Timings</h3>
+          <h3 class="text-lg font-semibold mb-3" style="color: #d1d5db;">📅 Class Timings</h3>
           <div class="grid md:grid-cols-2 gap-4">
             {#each offlineBatches as batch}
-              <div class="bg-cream-200 p-4 rounded-lg">
+              <div class="bg-black p-4 rounded-lg">
                 <p class="font-bold text-primary-600">{batch.name}</p>
                 <p>{batch.days}</p>
                 <p class="text-sm text-secondary-600">{batch.time}</p>
@@ -54,7 +54,7 @@
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--color-secondary-600);">👥 Who Can Join?</h3>
+          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">👥 Who Can Join?</h3>
           <ul class="list-disc pl-6 space-y-1">
             <li>All ages welcome</li>
             <li>All genders welcome</li>
@@ -85,29 +85,29 @@
 </section>
 
 <!-- Online Classes -->
-<section class="section-padding bg-cream-200">
+<section class="section-padding bg-black">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto">
       <div class="traditional-card p-8">
-        <h2 class="text-3xl font-bold mb-6" style="color: var(--color-primary-600);">Online One-to-One Classes</h2>
+        <h2 class="text-3xl font-bold mb-6" style="color: var(--color-accent-400);">Online One-to-One Classes</h2>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--color-secondary-600);">💻 Platform</h3>
+          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">💻 Platform</h3>
           <p>Zoom (link provided upon enrollment)</p>
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--color-secondary-600);">⏰ Schedule</h3>
+          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">⏰ Schedule</h3>
           <p>Flexible timing arranged with the student</p>
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--color-secondary-600);">📊 Frequency</h3>
+          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">📊 Frequency</h3>
           <p>8 classes per month (typically 2 sessions per week)</p>
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--color-secondary-600);">✨ Benefits</h3>
+          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">✨ Benefits</h3>
           <ul class="list-disc pl-6 space-y-1">
             <li>Personalized one-on-one attention</li>
             <li>Flexible scheduling to fit your routine</li>
@@ -127,9 +127,9 @@
 </section>
 
 <!-- Enrollment Process -->
-<section class="section-padding bg-white">
+<section class="section-padding bg-black">
   <div class="container-custom">
-    <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-primary-600);">Enrollment Process</h2>
+    <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-accent-400);">Enrollment Process</h2>
 
     <div class="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {#each enrollmentSteps as step}
@@ -137,8 +137,8 @@
           <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold text-2xl mx-auto mb-4">
             {step.num}
           </div>
-          <h3 class="font-bold mb-2" style="color: var(--color-primary-600);">{step.title}</h3>
-          <p class="text-sm" style="color: var(--color-secondary-700);">{step.desc}</p>
+          <h3 class="font-bold mb-2" style="color: var(--color-accent-400);">{step.title}</h3>
+          <p class="text-sm" style="color: #d1d5db;">{step.desc}</p>
         </div>
       {/each}
     </div>
@@ -156,7 +156,7 @@
       <a href="/contact" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all text-lg">
         Book Demo Class
       </a>
-      <a href="tel:+919600025105" class="px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white transition-all text-lg">
+      <a href="tel:+919600025105" class="px-8 py-4 bg-black/20 hover:bg-black/30 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white transition-all text-lg">
         📞 Call Us Now
       </a>
     </div>

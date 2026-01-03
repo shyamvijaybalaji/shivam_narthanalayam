@@ -16,18 +16,18 @@
 </section>
 
 <!-- Contact Section -->
-<section class="section-padding bg-white">
+<section class="section-padding bg-black">
   <div class="container-custom">
     <div class="grid lg:grid-cols-2 gap-12">
       <!-- Contact Form -->
       <div>
-        <h2 class="text-2xl font-bold mb-6" style="color: var(--color-primary-600);">Send Us a Message</h2>
+        <h2 class="text-2xl font-bold mb-6 text-accent-400">Send Us a Message</h2>
         <ContactForm />
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h2 class="text-2xl font-bold mb-6" style="color: var(--color-primary-600);">Contact Information</h2>
+        <h2 class="text-2xl font-bold mb-6 text-accent-400">Contact Information</h2>
 
         <div class="space-y-6">
           <!-- Phone -->
@@ -39,8 +39,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold mb-1" style="color: var(--color-primary-600);">Phone</h3>
-                <a href="tel:+919600025105" class="text-lg hover:text-primary-700 transition-colors">+91-9600025105</a>
+                <h3 class="font-bold mb-1 text-accent-400">Phone</h3>
+                <a href="tel:+919600025105" class="text-lg text-gray-200 hover:text-accent-400 transition-colors">+91-9600025105</a>
               </div>
             </div>
           </div>
@@ -54,8 +54,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold mb-1" style="color: var(--color-primary-600);">Email</h3>
-                <a href="mailto:shivam@narthanalayam.in" class="text-lg hover:text-primary-700 transition-colors break-all">shivam@narthanalayam.in</a>
+                <h3 class="font-bold mb-1 text-accent-400">Email</h3>
+                <a href="mailto:shivam@narthanalayam.in" class="text-lg text-gray-200 hover:text-accent-400 transition-colors break-all">shivam@narthanalayam.in</a>
               </div>
             </div>
           </div>
@@ -70,9 +70,9 @@
                 </svg>
               </div>
               <div>
-                <h3 class="font-bold mb-1" style="color: var(--color-primary-600);">Location</h3>
-                <p class="mb-2">Little Millennium Play School<br/>Pudur, Chennai 600053</p>
-                <a href="https://maps.app.goo.gl/2Ed8vJet8DTRBzR67" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 underline">
+                <h3 class="font-bold mb-1 text-accent-400">Location</h3>
+                <p class="mb-2 text-gray-200">Little Millennium Play School<br/>Pudur, Chennai 600053</p>
+                <a href="https://maps.app.goo.gl/2Ed8vJet8DTRBzR67" target="_blank" rel="noopener noreferrer" class="text-accent-400 hover:text-accent-500 underline">
                   View on Google Maps →
                 </a>
               </div>
@@ -81,8 +81,8 @@
 
           <!-- Class Timings -->
           <div class="traditional-card p-6">
-            <h3 class="font-bold mb-3" style="color: var(--color-primary-600);">Class Timings</h3>
-            <div class="space-y-2 text-sm">
+            <h3 class="font-bold mb-3 text-accent-400">Class Timings</h3>
+            <div class="space-y-2 text-sm text-gray-200">
               <p><strong>Batch 1:</strong> Mon & Wed, 4:30-6:30 PM</p>
               <p><strong>Batch 2:</strong> Tue & Thu, 4:30-6:30 PM</p>
               <p><strong>Online:</strong> Flexible timing</p>
@@ -95,7 +95,7 @@
 </section>
 
 <!-- Map -->
-<section class="bg-cream-200 py-8">
+<section class="bg-black py-8">
   <div class="container-custom">
     <div class="rounded-2xl overflow-hidden shadow-xl">
       <iframe

@@ -23,7 +23,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 {scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'}">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black shadow-lg border-b border-gray-800">
   <nav class="container-custom">
     <div class="flex items-center justify-between h-16 sm:h-20">
       <!-- Logo/Brand -->
@@ -33,8 +33,8 @@
             <span class="text-white font-bold text-xl">SN</span>
           </div>
           <div class="hidden sm:block">
-            <p class="font-bold text-lg leading-none" style="color: var(--color-primary-600);">Shivam Narthanalayam</p>
-            <p class="text-xs leading-none mt-1" style="color: var(--color-secondary-600);">Bharatanatyam Academy</p>
+            <p class="font-bold text-lg leading-none text-accent-400">Shivam Narthanalayam</p>
+            <p class="text-xs leading-none mt-1 text-gray-300">Bharatanatyam Academy</p>
           </div>
         </a>
       </div>
@@ -43,29 +43,25 @@
       <div class="hidden md:flex items-center space-x-1">
         <a
           href="/"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors {isActive('/') && currentPath === '/' ? 'bg-primary-600 text-white' : 'hover:bg-cream-200'}"
-          style="color: {isActive('/') && currentPath === '/' ? '#fff' : 'var(--color-brown-text)'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/') && currentPath === '/' ? 'bg-primary-600' : 'hover:bg-gray-800'}"
         >
           Home
         </a>
         <a
           href="/about"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors {isActive('/about') ? 'bg-primary-600 text-white' : 'hover:bg-cream-200'}"
-          style="color: {isActive('/about') ? '#fff' : 'var(--color-brown-text)'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/about') ? 'bg-primary-600' : 'hover:bg-gray-800'}"
         >
           About
         </a>
         <a
           href="/classes"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors {isActive('/classes') ? 'bg-primary-600 text-white' : 'hover:bg-cream-200'}"
-          style="color: {isActive('/classes') ? '#fff' : 'var(--color-brown-text)'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/classes') ? 'bg-primary-600' : 'hover:bg-gray-800'}"
         >
           Classes
         </a>
         <a
           href="/gallery"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors {isActive('/gallery') ? 'bg-primary-600 text-white' : 'hover:bg-cream-200'}"
-          style="color: {isActive('/gallery') ? '#fff' : 'var(--color-brown-text)'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/gallery') ? 'bg-primary-600' : 'hover:bg-gray-800'}"
         >
           Gallery
         </a>
@@ -97,36 +93,32 @@
 
     <!-- Mobile Navigation -->
     {#if mobileMenuOpen}
-      <div class="md:hidden py-4 bg-cream-100 border-t-2 border-accent-500 rounded-b-lg">
+      <div class="md:hidden py-4 bg-black border-t-2 border-accent-500 rounded-b-lg">
         <div class="flex flex-col space-y-2">
           <a
             href="/"
-            class="px-4 py-2 rounded-lg transition-colors {isActive('/') && currentPath === '/' ? 'bg-primary-600 text-white font-semibold' : 'hover:bg-cream-200'}"
-            style="color: {isActive('/') && currentPath === '/' ? '#fff' : 'var(--color-brown-text)'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/') && currentPath === '/' ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
             on:click={() => mobileMenuOpen = false}
           >
             Home
           </a>
           <a
             href="/about"
-            class="px-4 py-2 rounded-lg transition-colors {isActive('/about') ? 'bg-primary-600 text-white font-semibold' : 'hover:bg-cream-200'}"
-            style="color: {isActive('/about') ? '#fff' : 'var(--color-brown-text)'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/about') ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
             on:click={() => mobileMenuOpen = false}
           >
             About
           </a>
           <a
             href="/classes"
-            class="px-4 py-2 rounded-lg transition-colors {isActive('/classes') ? 'bg-primary-600 text-white font-semibold' : 'hover:bg-cream-200'}"
-            style="color: {isActive('/classes') ? '#fff' : 'var(--color-brown-text)'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/classes') ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
             on:click={() => mobileMenuOpen = false}
           >
             Classes
           </a>
           <a
             href="/gallery"
-            class="px-4 py-2 rounded-lg transition-colors {isActive('/gallery') ? 'bg-primary-600 text-white font-semibold' : 'hover:bg-cream-200'}"
-            style="color: {isActive('/gallery') ? '#fff' : 'var(--color-brown-text)'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/gallery') ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
             on:click={() => mobileMenuOpen = false}
           >
             Gallery

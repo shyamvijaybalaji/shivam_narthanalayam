@@ -65,8 +65,8 @@
 <form on:submit={handleSubmit} class="space-y-6">
   <!-- Name Field -->
   <div>
-    <label for="name" class="block text-sm font-medium mb-2" style="color: var(--color-brown-text);">
-      Name <span class="text-primary-600">*</span>
+    <label for="name" class="block text-sm font-medium mb-2 text-gray-200">
+      Name <span class="text-accent-400">*</span>
     </label>
     <input
       type="text"
@@ -80,8 +80,8 @@
 
   <!-- Email Field -->
   <div>
-    <label for="email" class="block text-sm font-medium mb-2" style="color: var(--color-brown-text);">
-      Email <span class="text-primary-600">*</span>
+    <label for="email" class="block text-sm font-medium mb-2 text-gray-200">
+      Email <span class="text-accent-400">*</span>
     </label>
     <input
       type="email"
@@ -95,7 +95,7 @@
 
   <!-- Phone Field -->
   <div>
-    <label for="phone" class="block text-sm font-medium mb-2" style="color: var(--color-brown-text);">
+    <label for="phone" class="block text-sm font-medium mb-2 text-gray-200">
       Phone Number
     </label>
     <input
@@ -109,7 +109,7 @@
 
   <!-- Preferred Class Type -->
   <div>
-    <label for="classType" class="block text-sm font-medium mb-2" style="color: var(--color-brown-text);">
+    <label for="classType" class="block text-sm font-medium mb-2 text-gray-200">
       Preferred Class Type
     </label>
     <select
@@ -126,8 +126,8 @@
 
   <!-- Message Field -->
   <div>
-    <label for="message" class="block text-sm font-medium mb-2" style="color: var(--color-brown-text);">
-      Message <span class="text-primary-600">*</span>
+    <label for="message" class="block text-sm font-medium mb-2 text-gray-200">
+      Message <span class="text-accent-400">*</span>
     </label>
     <textarea
       id="message"
@@ -166,7 +166,7 @@
     {isSubmitting ? 'Sending...' : 'Send Message'}
   </button>
 
-  <p class="text-sm text-center" style="color: var(--color-secondary-600);">
-    Or call us directly at <a href="tel:+919600025105" class="text-primary-600 hover:text-primary-700 font-medium">+91-9600025105</a>
+  <p class="text-sm text-center text-gray-300">
+    Or call us directly at <a href="tel:+919600025105" class="text-accent-400 hover:text-accent-500 font-medium">+91-9600025105</a>
   </p>
 </form>

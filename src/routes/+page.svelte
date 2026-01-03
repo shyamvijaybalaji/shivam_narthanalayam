@@ -19,6 +19,45 @@
   <meta name="keywords" content="Bharatanatyam, dance classes Chennai, Kalakshetra style, Pandanallur Bani, classical dance, Guru-Shishya Parampara, Pudur Chennai" />
 </svelte:head>
 
+<!-- Video Section with Bharatanatyam Description -->
+<section class="relative w-full bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900">
+  <div class="container-custom py-8">
+    <div class="grid lg:grid-cols-12 gap-6 items-center">
+      <!-- Left Text -->
+      <div class="lg:col-span-3 text-center lg:text-right">
+        <h3 class="text-xl font-bold text-accent-400 mb-3">The Art of Bharatanatyam</h3>
+        <p class="text-cream-200 text-sm leading-relaxed">
+          A classical dance form that tells stories through graceful movements, expressions, and rhythmic footwork.
+        </p>
+      </div>
+
+      <!-- Video -->
+      <div class="lg:col-span-6 flex items-center justify-center relative">
+        <video
+          class="w-full max-h-[75vh] object-contain rounded-lg shadow-2xl"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="/bharatanatyam-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- Blur overlay for text area (middle-left) -->
+        <div class="absolute top-[48%] left-[20%] -translate-y-1/2 w-[22%] h-[16%] backdrop-blur-md" style="mask-image: radial-gradient(ellipse, black 20%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+      </div>
+
+      <!-- Right Text -->
+      <div class="lg:col-span-3 text-center lg:text-left">
+        <h3 class="text-xl font-bold text-accent-400 mb-3">Ancient Tradition</h3>
+        <p class="text-cream-200 text-sm leading-relaxed">
+          Rooted in the temples of Tamil Nadu, Bharatanatyam embodies devotion, beauty, and cultural heritage.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Hero Section -->
 <section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 overflow-hidden">
   <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHptMC0xMGMwLTIuMjEtMS43OS00LTQtNHMtNCAxLjc5LTQgNCAx Ljc5IDQgNCA0IDQtMS43OSA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
@@ -55,14 +94,14 @@
 </section>
 
 <!-- Quick Highlights -->
-<section class="section-padding bg-white">
+<section class="section-padding bg-black">
   <div class="container-custom">
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {#each highlights as item}
         <div class="traditional-card p-6 text-center hover:scale-105 transition-transform">
           <div class="text-5xl mb-4">{item.icon}</div>
-          <h3 class="font-bold text-lg mb-2" style="color: var(--color-primary-600);">{item.title}</h3>
-          <p class="text-sm" style="color: var(--color-secondary-700);">{item.desc}</p>
+          <h3 class="font-bold text-lg mb-2 text-accent-400">{item.title}</h3>
+          <p class="text-sm text-gray-300">{item.desc}</p>
         </div>
       {/each}
     </div>
@@ -70,17 +109,17 @@
 </section>
 
 <!-- About Preview -->
-<section class="section-padding bg-cream-200">
+<section class="section-padding bg-black">
   <div class="container-custom">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="section-title ornate-heading" style="color: var(--color-primary-600);">About Shruthi Sekar</h2>
+        <h2 class="section-title ornate-heading text-accent-400">About Shruthi Sekar</h2>
         <div class="h-1 w-24 bg-accent-500 mb-6"></div>
-        <p class="text-lg mb-4" style="color: var(--color-brown-text);">
+        <p class="text-lg mb-4 text-gray-200">
           Shruthi Sekar brings over a decade of training and 5 years of dedicated teaching experience
           in the authentic Pandanallur Bani (Kalakshetra style) of Bharatanatyam.
         </p>
-        <p class="mb-6" style="color: var(--color-secondary-700);">
+        <p class="mb-6 text-gray-300">
           Having trained under renowned gurus Prakash Krishna (Cuddalore), Ratheesh Krishna (Chennai),
           and Sophia Ratheesh (Chennai), she is the recipient of the prestigious Abhinaya Rani Award (2006).
         </p>
@@ -88,8 +127,8 @@
           Read Full Bio →
         </a>
       </div>
-      <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl aspect-square flex items-center justify-center">
-        <svg class="w-32 h-32 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="bg-black rounded-2xl aspect-square flex items-center justify-center border border-gray-800">
+        <svg class="w-32 h-32 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       </div>
@@ -98,15 +137,15 @@
 </section>
 
 <!-- Testimonials -->
-<section class="section-padding bg-white">
+<section class="section-padding bg-black">
   <div class="container-custom">
-    <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-primary-600);">What Our Students Say</h2>
+    <h2 class="section-title text-center mb-12 ornate-heading text-accent-400">What Our Students Say</h2>
     <div class="grid md:grid-cols-3 gap-8">
       {#each testimonials as item}
         <div class="traditional-card p-6">
           <div class="text-accent-500 mb-4 text-4xl">"</div>
-          <p class="mb-4 italic" style="color: var(--color-secondary-700);">{item.quote}</p>
-          <p class="font-semibold" style="color: var(--color-primary-600);">— {item.name}</p>
+          <p class="mb-4 italic text-gray-300">{item.quote}</p>
+          <p class="font-semibold text-accent-400">— {item.name}</p>
         </div>
       {/each}
     </div>

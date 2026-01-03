@@ -20,16 +20,16 @@
 </section>
 
 <!-- Full Bio -->
-<section class="section-padding bg-white">
+<section class="section-padding bg-black">
   <div class="container-custom max-w-4xl">
-    <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl aspect-square max-w-md mx-auto mb-12 flex items-center justify-center">
+    <div class="bg-gradient-to-br bg-black rounded-2xl aspect-square max-w-md mx-auto mb-12 flex items-center justify-center">
       <svg class="w-40 h-40 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
       </svg>
     </div>
 
-    <div class="prose prose-lg max-w-none" style="color: var(--color-brown-text);">
-      <p class="text-xl font-semibold mb-6" style="color: var(--color-primary-600);">
+    <div class="prose prose-lg max-w-none" style="color: #e5e5e5;">
+      <p class="text-xl font-semibold mb-6" style="color: var(--color-accent-400);">
         Shruthi Sekar brings over a decade of training and 5 years of dedicated teaching experience in the authentic Pandanallur Bani (Kalakshetra style) of Bharatanatyam.
       </p>
 
@@ -37,7 +37,7 @@
         Having trained under renowned gurus <strong>Prakash Krishna (Cuddalore)</strong>, <strong>Ratheesh Krishna (Chennai)</strong>, and <strong>Sophia Ratheesh (Chennai)</strong>, she is the recipient of the prestigious <strong>Abhinaya Rani Award (2006)</strong>.
       </p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4" style="color: var(--color-primary-600);">Teaching Philosophy</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4" style="color: var(--color-accent-400);">Teaching Philosophy</h2>
       <p class="mb-4">
         Her teaching philosophy is rooted in the traditional values of <strong>Guru-Shishya Parampara</strong>. She believes in nurturing each student's unique expression while grounding them in the rich heritage of this ancient art form.
       </p>
@@ -55,7 +55,7 @@
         She emphasizes the importance of understanding the nuances of mudras, facial expressions, and rhythmic patterns to convey the beauty and emotion of the dance.
       </p>
 
-      <p class="text-lg font-semibold" style="color: var(--color-secondary-600);">
+      <p class="text-lg font-semibold" style="color: #d1d5db;">
         At Shivam Narthanalayam, students of all ages receive personalized attention, structured curriculum, and a supportive environment where they can grow, explore, and evolve as dancers and individuals - whether through in-person classes in Chennai or flexible online one-to-one sessions.
       </p>
     </div>
@@ -63,9 +63,9 @@
 </section>
 
 <!-- Achievements Timeline -->
-<section class="section-padding bg-cream-200">
+<section class="section-padding bg-black">
   <div class="container-custom">
-    <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-primary-600);">Achievements & Training</h2>
+    <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-accent-400);">Achievements & Training</h2>
 
     <div class="max-w-3xl mx-auto space-y-8">
       {#each achievements as item}
@@ -76,8 +76,8 @@
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">{item.title}</h3>
-            <p style="color: var(--color-secondary-700);">{item.desc}</p>
+            <h3 class="text-xl font-bold mb-2" style="color: var(--color-accent-400);">{item.title}</h3>
+            <p style="color: #d1d5db;">{item.desc}</p>
           </div>
         </div>
       {/each}

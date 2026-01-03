@@ -54,8 +54,8 @@ html {
 }
 
 body {
-  @apply bg-cream-200 antialiased;
-  color: var(--color-brown-text);
+  @apply bg-black antialiased;
+  color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-  @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+  @apply bg-black rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-800;
 }
 
 .input-field {
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .traditional-card {
-  @apply bg-white rounded-lg shadow-md overflow-hidden;
+  @apply bg-black rounded-lg shadow-md overflow-hidden border border-gray-800;
   border-top: 3px solid var(--color-accent-500);
 }
 
