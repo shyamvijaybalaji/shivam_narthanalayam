@@ -43,8 +43,8 @@
           <source src="/bharatanatyam-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <!-- Blur overlay for text area (middle-left) -->
-        <div class="absolute top-[48%] left-[20%] -translate-y-1/2 w-[22%] h-[16%] backdrop-blur-md" style="mask-image: radial-gradient(ellipse, black 20%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+        <!-- Blur overlay for text area (middle-left) - hidden on mobile, shown on desktop -->
+        <div class="hidden lg:block absolute top-[48%] left-[20%] -translate-y-1/2 w-[22%] h-[16%] backdrop-blur-md" style="mask-image: radial-gradient(ellipse, black 20%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
       </div>
 
       <!-- Right Text -->
