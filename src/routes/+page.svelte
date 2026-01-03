@@ -44,7 +44,7 @@
           Your browser does not support the video tag.
         </video>
         <!-- Blur overlay for text area - responsive positioning -->
-        <div class="absolute top-[50%] left-[8%] lg:top-[48%] lg:left-[20%] -translate-y-1/2 w-[25%] h-[18%] lg:w-[22%] lg:h-[16%] backdrop-blur-md" style="mask-image: radial-gradient(ellipse, black 20%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+        <div class="absolute top-[50%] left-[4%] lg:top-[48%] lg:left-[20%] -translate-y-1/2 w-[25%] h-[18%] lg:w-[22%] lg:h-[16%] backdrop-blur-md" style="mask-image: radial-gradient(ellipse, black 20%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
       </div>
 
       <!-- Right Text -->
