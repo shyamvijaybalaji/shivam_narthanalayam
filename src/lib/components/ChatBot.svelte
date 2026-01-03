@@ -41,6 +41,9 @@
 
     isLoading = true;
 
+    // Scroll to show loading indicator
+    setTimeout(scrollToBottom, 100);
+
     try {
       const response = await fetch('/api/chatbot', {
         method: 'POST',
