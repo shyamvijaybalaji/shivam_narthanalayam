@@ -177,7 +177,7 @@
     <div bind:this={chatContainer} class="flex-1 overflow-y-auto p-4 space-y-4 bg-cream-100">
       {#each messages as message}
         <div class="flex {message.role === 'user' ? 'justify-end' : 'justify-start'}">
-          <div class="max-w-[80%] {message.role === 'user' ? 'bg-primary-600 text-white' : 'bg-white'} rounded-lg p-3 shadow-sm">
+          <div class="max-w-[80%] {message.role === 'user' ? 'bg-primary-600 text-white' : 'bg-white text-gray-900'} rounded-lg p-3 shadow-sm">
             <p class="text-sm whitespace-pre-wrap">{message.content}</p>
           </div>
         </div>
@@ -245,7 +245,7 @@
           bind:value={userInput}
           on:keypress={handleKeyPress}
           placeholder="Type your message..."
-          class="flex-1 px-4 py-2 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors text-sm"
+          class="flex-1 px-4 py-2 rounded-lg border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors text-sm text-gray-900 placeholder-gray-500"
           disabled={isLoading}
         />
         <button
