@@ -25,6 +25,13 @@ export const POST: RequestHandler = async ({ request }) => {
 
       if (!enquiryResult.success) {
         console.error('Failed to submit enquiry:', enquiryResult.error);
+        return json(
+          {
+            error: 'Failed to save your information. Please try again or contact us directly.',
+            details: enquiryResult.error
+          },
+          { status: 500 }
+        );
       }
 
       // Send email notification
@@ -38,7 +45,14 @@ export const POST: RequestHandler = async ({ request }) => {
 
       if (!emailResult.success) {
         console.error('Failed to send email:', emailResult.error);
+        // Don't fail the request if email fails, but log it
       }
+
+      // Return success for lead submission
+      return json({
+        success: true,
+        message: `Thank you, ${leadData.name}! We've received your information and will contact you shortly at ${leadData.email}. Looking forward to welcoming you to Shivam Narthanalayam!`
+      });
     }
 
     // Get AI response

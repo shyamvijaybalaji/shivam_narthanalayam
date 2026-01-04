@@ -7,9 +7,9 @@
   ];
 
   const testimonials = [
-    { name: 'Parent of Student', quote: 'My daughter has blossomed under Shruthi\'s guidance. The attention to detail and passion for Bharatanatyam is truly inspiring.' },
-    { name: 'Adult Student', quote: 'Learning Bharatanatyam was a dream I thought I\'d missed. Shruthi made it possible with her patient teaching and flexible online classes.' },
-    { name: 'Parent of Student', quote: 'The traditional values and cultural education my son receives alongside dance training is invaluable.' }
+    { name: 'Lakshmi Sundaram', quote: 'My daughter has blossomed under Shruthi\'s guidance. The attention to detail and passion for Bharatanatyam is truly inspiring.' },
+    { name: 'Priya Krishnan', quote: 'Learning Bharatanatyam was a dream I thought I\'d missed. Shruthi made it possible with her patient teaching and flexible online classes.' },
+    { name: 'Rajesh Kumar', quote: 'The traditional values and cultural education my son receives alongside dance training is invaluable.' }
   ];
 </script>
 

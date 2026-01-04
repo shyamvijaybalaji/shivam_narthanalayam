@@ -97,7 +97,7 @@
         .map(m => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
         .join('\n');
 
-      await fetch('/api/chatbot', {
+      const response = await fetch('/api/chatbot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -111,11 +111,17 @@
         })
       });
 
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit lead information');
+      }
+
       messages = [
         ...messages,
         {
           role: 'assistant',
-          content: `Thank you, ${leadData.name}! We've received your information and will contact you shortly at ${leadData.email}. Looking forward to welcoming you to Shivam Narthanalayam!`
+          content: data.message || `Thank you, ${leadData.name}! We've received your information and will contact you shortly at ${leadData.email}. Looking forward to welcoming you to Shivam Narthanalayam!`
         }
       ];
 
@@ -123,7 +129,8 @@
       leadData = { name: '', email: '', phone: '', preferredClassType: '' };
 
     } catch (error) {
-      alert('Failed to submit your information. Please try contacting us directly.');
+      alert('Failed to submit your information. Please try contacting us directly at +91-9600025105.');
+      console.error('Lead submission error:', error);
     }
   }
 

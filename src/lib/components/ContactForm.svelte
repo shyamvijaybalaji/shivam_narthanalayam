@@ -37,6 +37,10 @@
       const data = await response.json();
 
       if (!response.ok) {
+        // Check if there are specific validation errors
+        if (data.errors && Array.isArray(data.errors)) {
+          throw new Error(data.errors.join('. '));
+        }
         throw new Error(data.error || 'Failed to submit form');
       }
 
