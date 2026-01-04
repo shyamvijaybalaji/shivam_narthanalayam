@@ -215,23 +215,23 @@
             type="text"
             bind:value={leadData.name}
             placeholder="Your Name *"
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm"
+            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
           />
           <input
             type="email"
             bind:value={leadData.email}
             placeholder="Your Email *"
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm"
+            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
           />
           <input
             type="tel"
             bind:value={leadData.phone}
             placeholder="Phone Number"
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm"
+            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
           />
           <select
             bind:value={leadData.preferredClassType}
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm"
+            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
           >
             <option value="">Preferred Class Type</option>
             <option value="offline">Offline Group Classes</option>
