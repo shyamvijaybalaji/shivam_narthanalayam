@@ -53,11 +53,11 @@ COPY --from=builder /app/package*.json ./
 RUN npm ci --only=production
 
 # Expose port
-EXPOSE 3000
+EXPOSE 3005
 
 # Set environment to production
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=3005
 
 # Start the application
 CMD ["node", "build/index.js"]
