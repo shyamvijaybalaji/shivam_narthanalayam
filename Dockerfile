@@ -41,9 +41,7 @@ WORKDIR /app
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/package*.json ./
 
-# Install production dependencies in build folder
-WORKDIR /app/build
-COPY build/package.json ./
+# Install production dependencies
 RUN npm ci --only=production
 
 # Expose port
@@ -54,4 +52,4 @@ ENV NODE_ENV=production
 ENV PORT=3000
 
 # Start the application
-CMD ["node", "index.js"]
+CMD ["node", "build/index.js"]
