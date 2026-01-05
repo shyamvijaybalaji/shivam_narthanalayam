@@ -32,7 +32,7 @@ export const POST: RequestHandler = async ({ request }) => {
     const enquiryResult = await submitEnquiry({
       name: data.name.trim(),
       email: data.email.trim(),
-      phone: data.phone?.trim(),
+      phone: data.phone && data.phone.trim() ? data.phone.trim() : undefined,
       message: data.message.trim(),
       preferred_class_type: data.preferredClassType,
       source: 'contact_form'

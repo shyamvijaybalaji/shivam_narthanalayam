@@ -17,7 +17,7 @@ export const POST: RequestHandler = async ({ request }) => {
       const enquiryResult = await submitEnquiry({
         name: leadData.name,
         email: leadData.email,
-        phone: leadData.phone,
+        phone: leadData.phone && leadData.phone.trim() ? leadData.phone.trim() : undefined,
         message: leadData.conversation || message,
         preferred_class_type: leadData.preferredClassType,
         source: 'chatbot'

@@ -6,6 +6,7 @@
   let userInput = '';
   let isLoading = false;
   let chatContainer: HTMLDivElement;
+  let inputField: HTMLInputElement;
 
   // Lead collection state
   let collectingLead = false;
@@ -14,6 +15,11 @@
     email: '',
     phone: '',
     preferredClassType: ''
+  };
+  let leadErrors = {
+    name: '',
+    email: '',
+    phone: ''
   };
 
   onMount(() => {
@@ -28,6 +34,12 @@
 
   function toggleChat() {
     isOpen = !isOpen;
+    // Auto-focus input when chat opens
+    if (isOpen) {
+      setTimeout(() => {
+        inputField?.focus();
+      }, 100);
+    }
   }
 
   async function sendMessage() {
@@ -83,12 +95,59 @@
       ];
     } finally {
       isLoading = false;
+      // Refocus input after message is sent
+      setTimeout(() => {
+        inputField?.focus();
+      }, 100);
     }
   }
 
+  function validateLeadForm() {
+    leadErrors = { name: '', email: '', phone: '' };
+    let isValid = true;
+
+    // Validate name
+    if (!leadData.name || leadData.name.trim().length < 2) {
+      leadErrors.name = 'Name must be at least 2 characters';
+      isValid = false;
+    } else if (leadData.name.trim().length > 100) {
+      leadErrors.name = 'Name must be less than 100 characters';
+      isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!leadData.email || !leadData.email.trim()) {
+      leadErrors.email = 'Email is required';
+      isValid = false;
+    } else if (!emailRegex.test(leadData.email.trim())) {
+      leadErrors.email = 'Please enter a valid email (e.g., name@example.com)';
+      isValid = false;
+    }
+
+    // Validate phone (optional, but if provided must be valid)
+    if (leadData.phone && leadData.phone.trim()) {
+      const phoneRegex = /^[0-9+\-\s()]+$/;
+      const cleanPhone = leadData.phone.trim();
+
+      if (!phoneRegex.test(cleanPhone)) {
+        leadErrors.phone = 'Phone number can only contain numbers, +, -, (), and spaces';
+        isValid = false;
+      } else if (cleanPhone.length < 10) {
+        leadErrors.phone = 'Phone number must be at least 10 digits';
+        isValid = false;
+      } else if (cleanPhone.length > 20) {
+        leadErrors.phone = 'Phone number must be less than 20 characters';
+        isValid = false;
+      }
+    }
+
+    return isValid;
+  }
+
   async function submitLead() {
-    if (!leadData.name || !leadData.email) {
-      alert('Please provide your name and email.');
+    // Validate form
+    if (!validateLeadForm()) {
       return;
     }
 
@@ -127,10 +186,24 @@
 
       collectingLead = false;
       leadData = { name: '', email: '', phone: '', preferredClassType: '' };
+      leadErrors = { name: '', email: '', phone: '' };
+
+      // Refocus chat input after lead submission
+      setTimeout(() => {
+        inputField?.focus();
+      }, 100);
 
     } catch (error) {
-      alert('Failed to submit your information. Please try contacting us directly at +91-9600025105.');
       console.error('Lead submission error:', error);
+
+      // Show error message in chat
+      messages = [
+        ...messages,
+        {
+          role: 'assistant',
+          content: 'I apologize, but there was an error submitting your information. Please try again or contact us directly at +91-9600025105 or shivam@narthanalayam.in.'
+        }
+      ];
     }
   }
 
@@ -211,32 +284,51 @@
       <div class="p-4 bg-cream-200 border-t-2 border-accent-500">
         <p class="text-sm font-medium mb-3" style="color: var(--color-brown-text);">We'd love to help you! Please share your details:</p>
         <div class="space-y-2">
-          <input
-            type="text"
-            bind:value={leadData.name}
-            placeholder="Your Name *"
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
-          />
-          <input
-            type="email"
-            bind:value={leadData.email}
-            placeholder="Your Email *"
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
-          />
-          <input
-            type="tel"
-            bind:value={leadData.phone}
-            placeholder="Phone Number"
-            class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
-          />
+          <div>
+            <input
+              type="text"
+              bind:value={leadData.name}
+              placeholder="Your Name *"
+              class="w-full px-3 py-2 rounded-lg border text-sm text-gray-900 {leadErrors.name ? 'border-red-500' : 'border-secondary-300'}"
+            />
+            {#if leadErrors.name}
+              <p class="text-xs text-red-600 mt-1">{leadErrors.name}</p>
+            {/if}
+          </div>
+
+          <div>
+            <input
+              type="email"
+              bind:value={leadData.email}
+              placeholder="Your Email *"
+              class="w-full px-3 py-2 rounded-lg border text-sm text-gray-900 {leadErrors.email ? 'border-red-500' : 'border-secondary-300'}"
+            />
+            {#if leadErrors.email}
+              <p class="text-xs text-red-600 mt-1">{leadErrors.email}</p>
+            {/if}
+          </div>
+
+          <div>
+            <input
+              type="tel"
+              bind:value={leadData.phone}
+              placeholder="Phone Number (Optional)"
+              class="w-full px-3 py-2 rounded-lg border text-sm text-gray-900 {leadErrors.phone ? 'border-red-500' : 'border-secondary-300'}"
+            />
+            {#if leadErrors.phone}
+              <p class="text-xs text-red-600 mt-1">{leadErrors.phone}</p>
+            {/if}
+          </div>
+
           <select
             bind:value={leadData.preferredClassType}
             class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
           >
-            <option value="">Preferred Class Type</option>
+            <option value="">Preferred Class Type (Optional)</option>
             <option value="offline">Offline Group Classes</option>
             <option value="online">Online One-to-One</option>
           </select>
+
           <button
             on:click={submitLead}
             class="w-full px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium hover:bg-primary-700 transition-colors"
@@ -252,6 +344,7 @@
       <div class="flex space-x-2">
         <input
           type="text"
+          bind:this={inputField}
           bind:value={userInput}
           on:keypress={handleKeyPress}
           placeholder="Type your message..."
