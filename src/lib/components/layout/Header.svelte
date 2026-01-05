@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-
   let mobileMenuOpen = false;
   let scrolled = false;
 
@@ -10,14 +8,6 @@
 
   function handleScroll() {
     scrolled = window.scrollY > 20;
-  }
-
-  $: currentPath = $page.url.pathname;
-
-  function isActive(path: string): boolean {
-    if (path === '/' && currentPath === '/') return true;
-    if (path !== '/' && currentPath.startsWith(path)) return true;
-    return false;
   }
 </script>
 
@@ -43,25 +33,25 @@
       <div class="hidden md:flex items-center space-x-1">
         <a
           href="/"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/') && currentPath === '/' ? 'bg-primary-600' : 'hover:bg-gray-800'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white hover:bg-gray-800"
         >
           Home
         </a>
         <a
           href="/about"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/about') ? 'bg-primary-600' : 'hover:bg-gray-800'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white hover:bg-gray-800"
         >
           About
         </a>
         <a
           href="/classes"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/classes') ? 'bg-primary-600' : 'hover:bg-gray-800'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white hover:bg-gray-800"
         >
           Classes
         </a>
         <a
           href="/gallery"
-          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white {isActive('/gallery') ? 'bg-primary-600' : 'hover:bg-gray-800'}"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-white hover:bg-gray-800"
         >
           Gallery
         </a>
@@ -97,28 +87,28 @@
         <div class="flex flex-col space-y-2">
           <a
             href="/"
-            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/') && currentPath === '/' ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white hover:bg-gray-800"
             on:click={() => mobileMenuOpen = false}
           >
             Home
           </a>
           <a
             href="/about"
-            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/about') ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white hover:bg-gray-800"
             on:click={() => mobileMenuOpen = false}
           >
             About
           </a>
           <a
             href="/classes"
-            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/classes') ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white hover:bg-gray-800"
             on:click={() => mobileMenuOpen = false}
           >
             Classes
           </a>
           <a
             href="/gallery"
-            class="px-4 py-2 rounded-lg transition-colors text-white {isActive('/gallery') ? 'bg-primary-600 font-semibold' : 'hover:bg-gray-800'}"
+            class="px-4 py-2 rounded-lg transition-colors text-white hover:bg-gray-800"
             on:click={() => mobileMenuOpen = false}
           >
             Gallery
