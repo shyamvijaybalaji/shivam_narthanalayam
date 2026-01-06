@@ -87,28 +87,76 @@
 <!-- Online Classes -->
 <section class="section-padding bg-black">
   <div class="container-custom">
-    <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--color-accent-400);">Online Classes</h2>
+
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+      <!-- Online Group Classes -->
       <div class="traditional-card p-8">
-        <h2 class="text-3xl font-bold mb-6" style="color: var(--color-accent-400);">Online One-to-One Classes</h2>
+        <h3 class="text-2xl font-bold mb-6" style="color: var(--color-accent-400);">Online Group Classes</h3>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">💻 Platform</h3>
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">💻 Platform</h4>
           <p>Zoom (link provided upon enrollment)</p>
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">⏰ Schedule</h3>
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">📅 Class Timings</h4>
+          <div class="space-y-2">
+            {#each offlineBatches as batch}
+              <div class="bg-black p-3 rounded-lg">
+                <p class="font-bold text-primary-600">{batch.name}</p>
+                <p class="text-sm">{batch.days}</p>
+                <p class="text-sm text-secondary-600">{batch.time}</p>
+              </div>
+            {/each}
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">✨ Benefits</h4>
+          <ul class="list-disc pl-6 space-y-1 text-sm">
+            <li>Learn from anywhere in the world</li>
+            <li>Same schedule as offline classes</li>
+            <li>Interactive group learning</li>
+          </ul>
+        </div>
+
+        <div class="border-t-2 border-accent-500 pt-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <p class="text-sm text-secondary-600 mb-1">Monthly Fee</p>
+              <p class="text-3xl font-bold text-primary-600">₹800</p>
+            </div>
+            <div class="text-center">
+              <p class="text-sm text-secondary-600 mb-1">Trial Class</p>
+              <p class="text-3xl font-bold text-green-600">FREE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Online One-to-One Classes -->
+      <div class="traditional-card p-8">
+        <h3 class="text-2xl font-bold mb-6" style="color: var(--color-accent-400);">Online One-to-One Classes</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">💻 Platform</h4>
+          <p>Zoom (link provided upon enrollment)</p>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">⏰ Schedule</h4>
           <p>Flexible timing arranged with the student</p>
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">📊 Frequency</h3>
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">📊 Frequency</h4>
           <p>8 classes per month (typically 2 sessions per week)</p>
         </div>
 
         <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2" style="color: #d1d5db;">✨ Benefits</h3>
-          <ul class="list-disc pl-6 space-y-1">
+          <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">✨ Benefits</h4>
+          <ul class="list-disc pl-6 space-y-1 text-sm">
             <li>Personalized one-on-one attention</li>
             <li>Flexible scheduling to fit your routine</li>
             <li>Learn from anywhere in the world</li>
