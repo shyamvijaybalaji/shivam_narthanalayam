@@ -73,7 +73,7 @@
       {#each achievements as item}
         <div class="traditional-card p-6 flex gap-6">
           <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold">
+            <div class="w-20 h-20 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold text-sm">
               {item.year}
             </div>
           </div>
