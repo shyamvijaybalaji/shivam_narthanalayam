@@ -17,20 +17,17 @@
     <h2 class="text-2xl font-bold mb-8 text-center" style="color: var(--color-accent-400);">Performance & Class Photos</h2>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {#each Array(12) as _, i}
-        <div class="aspect-square bg-gradient-to-br bg-black rounded-lg overflow-hidden hover:scale-105 transition-transform shadow-md hover:shadow-xl">
-          <div class="w-full h-full flex items-center justify-center">
-            <svg class="w-16 h-16 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
+      {#each Array(17) as _, i}
+        <div class="aspect-square bg-gradient-to-br bg-black rounded-lg overflow-hidden hover:scale-105 transition-transform shadow-md hover:shadow-xl cursor-pointer">
+          <img
+            src="/gallery/gallery-{i + 2}.jpeg"
+            alt="Bharatanatyam dance performance or class at Shivam Narthanalayam - Photo {i + 2}"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
       {/each}
     </div>
-
-    <p class="text-center mt-8 text-secondary-600 italic">
-      Photos coming soon! We're currently building our gallery. Contact us for more information about our classes.
-    </p>
   </div>
 </section>
 

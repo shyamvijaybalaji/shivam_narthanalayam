@@ -22,10 +22,12 @@
 <!-- Full Bio -->
 <section class="section-padding bg-black">
   <div class="container-custom max-w-4xl">
-    <div class="bg-gradient-to-br bg-black rounded-2xl aspect-square max-w-md mx-auto mb-12 flex items-center justify-center">
-      <svg class="w-40 h-40 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
+    <div class="bg-gradient-to-br bg-black rounded-2xl aspect-square max-w-md mx-auto mb-12 overflow-hidden shadow-2xl">
+      <img
+        src="/gallery/gallery-1.jpeg"
+        alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
+        class="w-full h-full object-cover"
+      />
     </div>
 
     <div class="prose prose-lg max-w-none" style="color: #e5e5e5;">
