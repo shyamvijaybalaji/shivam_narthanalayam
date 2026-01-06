@@ -129,10 +129,12 @@
           Read Full Bio →
         </a>
       </div>
-      <div class="bg-black rounded-2xl aspect-square flex items-center justify-center border border-gray-800">
-        <svg class="w-32 h-32 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
+      <div class="bg-black rounded-2xl aspect-square overflow-hidden shadow-2xl">
+        <img
+          src="/gallery/gallery-1.jpeg"
+          alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
+          class="w-full h-full object-cover"
+        />
       </div>
     </div>
   </div>
