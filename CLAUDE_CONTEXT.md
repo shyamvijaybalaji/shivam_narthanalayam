@@ -160,7 +160,7 @@ npm run check
 - **Server Path:** `/var/www/shivam_narthanalayam`
 - **SSH Access:** `ssh root@srv1170791` (credentials not stored here)
 - **Web Server:** Nginx (proxies to Docker container)
-- **Container Port:** 3000
+- **Container Port:** 3005 (WealthFlow project uses 3000)
 - **Nginx Config:** `/etc/nginx/sites-available/shivamnarthanalayam`
 
 ### Deployment Process (Step-by-Step)
@@ -214,7 +214,7 @@ cd /var/www/shivam_narthanalayam && git pull origin main && docker-compose down 
 **Key Config:**
 ```nginx
 location / {
-    proxy_pass http://localhost:3000;  # Must match Docker port
+    proxy_pass http://localhost:3005;  # Must match Docker port (3005)
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection 'upgrade';
@@ -238,7 +238,7 @@ nginx -t && systemctl reload nginx
 3. ✅ **Empty Phone Validation:** Convert empty strings to `undefined` in both chatbot and contact APIs
 4. ✅ **Form Validation:** Added comprehensive client-side validation with error messages
 5. ✅ **Input Focus:** Chatbot input auto-focuses and refocuses after message send
-6. ✅ **Nginx Port Mismatch:** Changed from 3001 to 3000
+6. ✅ **Docker Port Configuration:** Using port 3005 (to avoid conflict with WealthFlow on 3000)
 
 ### Important Notes
 - **Email Notifications:** Resend API not configured (placeholder key), emails won't send but app works
@@ -295,7 +295,7 @@ docker exec -it <container> bash     # Shell into container
 systemctl status nginx    # Check nginx status
 nginx -t                  # Test nginx config
 systemctl reload nginx    # Reload nginx
-curl http://localhost:3000  # Test Docker app locally
+curl http://localhost:3005  # Test Docker app locally
 ```
 
 ---
