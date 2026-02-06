@@ -246,9 +246,11 @@
     <!-- Header -->
     <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold">
-          SN
-        </div>
+        <img
+          src="/logo.png"
+          alt="Shivam Narthanalayam Logo"
+          class="w-10 h-10 object-contain"
+        />
         <div>
           <h3 class="font-semibold">Shivam Narthanalayam</h3>
           <p class="text-xs opacity-90">Bharatanatyam Academy</p>

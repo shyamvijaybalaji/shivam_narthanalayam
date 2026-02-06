@@ -19,9 +19,11 @@
       <!-- Logo/Brand -->
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center space-x-3 group">
-          <div class="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-            <span class="text-white font-bold text-xl">SN</span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Shivam Narthanalayam Logo"
+            class="w-14 h-14 sm:w-16 sm:h-16 object-contain group-hover:scale-105 transition-transform"
+          />
           <div class="hidden sm:block">
             <p class="font-bold text-lg leading-none text-accent-400">Shivam Narthanalayam</p>
             <p class="text-xs leading-none mt-1 text-gray-300">Bharatanatyam Academy</p>

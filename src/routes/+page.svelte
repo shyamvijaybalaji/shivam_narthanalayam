@@ -66,8 +66,12 @@
 
   <div class="container-custom relative z-10 text-center text-white py-20">
     <div class="mb-6">
-      <div class="w-24 h-24 mx-auto bg-accent-500 rounded-full flex items-center justify-center shadow-2xl mb-6 animate-pulse-subtle">
-        <span class="text-primary-900 font-bold text-4xl">SN</span>
+      <div class="w-24 h-24 mx-auto flex items-center justify-center shadow-2xl mb-6 animate-pulse-subtle">
+        <img
+          src="/logo.png"
+          alt="Shivam Narthanalayam Logo"
+          class="w-24 h-24 object-contain"
+        />
       </div>
     </div>
 

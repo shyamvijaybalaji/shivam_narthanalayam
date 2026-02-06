@@ -8,9 +8,11 @@
       <!-- Brand -->
       <div class="md:col-span-2">
         <div class="flex items-center space-x-3 mb-4">
-          <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center shadow-lg">
-            <span class="text-primary-900 font-bold text-xl">SN</span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Shivam Narthanalayam Logo"
+            class="w-12 h-12 object-contain"
+          />
           <div>
             <h3 class="text-xl font-bold text-accent-400">Shivam Narthanalayam</h3>
             <p class="text-sm text-cream-200">Bharatanatyam Dance Academy</p>
