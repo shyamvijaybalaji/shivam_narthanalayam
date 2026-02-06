@@ -14,7 +14,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="icon" type="image/png" href="/logo.png" />
+	<link rel="apple-touch-icon" href="/logo.png" />
 
 	<!-- Meta tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
