@@ -20,7 +20,7 @@
 </svelte:head>
 
 <!-- Video Section with Bharatanatyam Description -->
-<section class="relative w-full bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 section-gradient-1">
+<section class="relative w-full section-gradient-1">
   <div class="container-custom py-8">
     <div class="grid lg:grid-cols-12 gap-6 items-center">
       <!-- Left Text -->
@@ -61,9 +61,7 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 overflow-hidden gradient-mesh">
-  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHptMC0xMGMwLTIuMjEtMS43OS00LTQtNHMtNCAxLjc5LTQgNCAx Ljc5IDQgNCA0IDQtMS43OSA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden section-gradient-2">
   <div class="container-custom relative z-10 text-center text-white py-20">
     <div class="mb-6">
       <div class="w-24 h-24 mx-auto flex items-center justify-center mb-6 animate-pulse-subtle glow-gold-strong rounded-full">
@@ -161,8 +159,9 @@
 </section>
 
 <!-- CTA Section -->
-<section class="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-  <div class="container-custom text-center">
+<section class="section-padding section-gradient-1 text-white relative">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-secondary-600/20"></div>
+  <div class="container-custom text-center relative z-10">
     <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Begin Your Journey?</h2>
     <p class="text-xl mb-8 text-cream-100 max-w-2xl mx-auto">
       Experience the beauty and grace of Bharatanatyam. Book your FREE demo class today!
