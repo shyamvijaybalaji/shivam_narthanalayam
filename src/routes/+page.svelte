@@ -20,7 +20,7 @@
 </svelte:head>
 
 <!-- Video Section with Bharatanatyam Description -->
-<section class="relative w-full bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900">
+<section class="relative w-full bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 section-gradient-1">
   <div class="container-custom py-8">
     <div class="grid lg:grid-cols-12 gap-6 items-center">
       <!-- Left Text -->
@@ -61,12 +61,12 @@
 </section>
 
 <!-- Hero Section -->
-<section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 overflow-hidden">
+<section class="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-700 to-secondary-900 overflow-hidden gradient-mesh">
   <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHptMC0xMGMwLTIuMjEtMS43OS00LTQtNHMtNCAxLjc5LTQgNCAx Ljc5IDQgNCA0IDQtMS43OSA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
 
   <div class="container-custom relative z-10 text-center text-white py-20">
     <div class="mb-6">
-      <div class="w-24 h-24 mx-auto flex items-center justify-center shadow-2xl mb-6 animate-pulse-subtle">
+      <div class="w-24 h-24 mx-auto flex items-center justify-center mb-6 animate-pulse-subtle glow-gold-strong rounded-full">
         <img
           src="/logo.png"
           alt="Shivam Narthanalayam Logo"
@@ -76,7 +76,7 @@
     </div>
 
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-      <span class="text-accent-400">Shivam Narthanalayam</span><br/>
+      <span class="text-accent-400 text-glow-gold">Shivam Narthanalayam</span><br/>
       <span class="text-2xl sm:text-3xl lg:text-4xl font-normal text-cream-100">Shruthi's Dance Academy</span>
     </h1>
 
@@ -89,10 +89,10 @@
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/contact" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all text-lg">
+      <a href="/contact" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg transition-all text-lg glow-gold shimmer-effect" style="box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5), 0 4px 15px rgba(255, 215, 0, 0.3);">
         Book Your FREE Demo Class
       </a>
-      <a href="/about" class="px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-accent-400 transition-all text-lg">
+      <a href="/about" class="px-8 py-4 glass text-white font-semibold rounded-lg border-2 border-accent-400 transition-all text-lg hover:glow-gold">
         Learn More
       </a>
     </div>
@@ -100,7 +100,7 @@
 </section>
 
 <!-- Quick Highlights -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-1">
   <div class="container-custom">
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {#each highlights as item}
@@ -115,7 +115,7 @@
 </section>
 
 <!-- About Preview -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-2">
   <div class="container-custom">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
@@ -133,7 +133,7 @@
           Read Full Bio →
         </a>
       </div>
-      <div class="bg-black rounded-2xl aspect-square overflow-hidden shadow-2xl">
+      <div class="rounded-2xl aspect-square overflow-hidden glow-maroon" style="box-shadow: 0 12px 40px rgba(128, 0, 32, 0.4), 0 6px 20px rgba(255, 215, 0, 0.2);">
         <img
           src="/gallery/gallery-1.jpeg"
           alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
@@ -145,7 +145,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-1">
   <div class="container-custom">
     <h2 class="section-title text-center mb-12 ornate-heading text-accent-400">What Our Students Say</h2>
     <div class="grid md:grid-cols-3 gap-8">

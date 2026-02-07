@@ -13,7 +13,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black shadow-lg border-b border-gray-800">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: linear-gradient(135deg, rgba(26, 10, 15, 0.98) 0%, rgba(10, 10, 10, 0.98) 100%); backdrop-filter: blur(8px); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);">
   <nav class="container-custom">
     <div class="flex items-center justify-between h-16 sm:h-20">
       <!-- Logo/Brand -->
@@ -59,7 +59,7 @@
         </a>
         <a
           href="/contact"
-          class="ml-2 px-6 py-2 bg-accent-500 text-primary-900 rounded-lg hover:bg-accent-600 transition-all font-semibold text-sm shadow-md hover:shadow-lg"
+          class="ml-2 px-6 py-2 bg-accent-500 text-primary-900 rounded-lg hover:bg-accent-600 transition-all font-semibold text-sm glow-gold"
         >
           Contact Us
         </a>
@@ -85,7 +85,7 @@
 
     <!-- Mobile Navigation -->
     {#if mobileMenuOpen}
-      <div class="md:hidden py-4 bg-black border-t-2 border-accent-500 rounded-b-lg">
+      <div class="md:hidden py-4 glass border-t-2 border-accent-500 rounded-b-lg">
         <div class="flex flex-col space-y-2">
           <a
             href="/"
@@ -117,7 +117,7 @@
           </a>
           <a
             href="/contact"
-            class="mx-4 px-4 py-3 bg-accent-500 text-primary-900 rounded-lg hover:bg-accent-600 transition-colors font-semibold text-center shadow-md"
+            class="mx-4 px-4 py-3 bg-accent-500 text-primary-900 rounded-lg hover:bg-accent-600 transition-colors font-semibold text-center glow-gold"
             on:click={() => mobileMenuOpen = false}
           >
             Contact Us

@@ -18,15 +18,15 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
+<section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">
   <div class="container-custom text-center">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Our Classes</h1>
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-glow-gold">Our Classes</h1>
     <p class="text-xl text-cream-200">Choose the perfect class format for your learning journey</p>
   </div>
 </section>
 
 <!-- Offline Classes -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-1">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto">
       <div class="traditional-card p-8 mb-8">
@@ -85,7 +85,7 @@
 </section>
 
 <!-- Online Classes -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-2">
   <div class="container-custom">
     <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--color-accent-400);">Online Classes</h2>
 
@@ -175,14 +175,14 @@
 </section>
 
 <!-- Enrollment Process -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-1">
   <div class="container-custom">
     <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-accent-400);">Enrollment Process</h2>
 
     <div class="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {#each enrollmentSteps as step}
         <div class="text-center">
-          <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold text-2xl mx-auto mb-4">
+          <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold text-2xl mx-auto mb-4 glow-gold">
             {step.num}
           </div>
           <h3 class="font-bold mb-2" style="color: var(--color-accent-400);">{step.title}</h3>
@@ -194,17 +194,17 @@
 </section>
 
 <!-- CTA -->
-<section class="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+<section class="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 text-white gradient-mesh">
   <div class="container-custom text-center">
-    <h2 class="text-3xl font-bold mb-6">Ready to Start Your Bharatanatyam Journey?</h2>
+    <h2 class="text-3xl font-bold mb-6 text-glow-gold">Ready to Start Your Bharatanatyam Journey?</h2>
     <p class="text-xl mb-8 text-cream-100 max-w-2xl mx-auto">
       Book your FREE demo class today and experience the joy of classical dance!
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/contact" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all text-lg">
+      <a href="/contact" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg transition-all text-lg glow-gold shimmer-effect" style="box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5), 0 4px 15px rgba(255, 215, 0, 0.3);">
         Book Demo Class
       </a>
-      <a href="tel:+919600025105" class="px-8 py-4 bg-black/20 hover:bg-black/30 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white transition-all text-lg">
+      <a href="tel:+919600025105" class="px-8 py-4 glass text-white font-semibold rounded-lg border-2 border-white transition-all text-lg hover:glow-gold">
         📞 Call Us Now
       </a>
     </div>

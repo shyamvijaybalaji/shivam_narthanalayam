@@ -12,17 +12,17 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
+<section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">
   <div class="container-custom text-center">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-4">About Shruthi Sekar</h1>
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-glow-gold">About Shruthi Sekar</h1>
     <p class="text-xl text-cream-200">Award-Winning Bharatanatyam Teacher | Guru-Shishya Parampara</p>
   </div>
 </section>
 
 <!-- Full Bio -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-1">
   <div class="container-custom max-w-4xl">
-    <div class="bg-gradient-to-br bg-black rounded-2xl aspect-square max-w-md mx-auto mb-12 overflow-hidden shadow-2xl">
+    <div class="rounded-2xl aspect-square max-w-md mx-auto mb-12 overflow-hidden glow-maroon" style="box-shadow: 0 12px 40px rgba(128, 0, 32, 0.5), 0 6px 20px rgba(255, 215, 0, 0.3);">
       <img
         src="/gallery/gallery-1.jpeg"
         alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
@@ -65,7 +65,7 @@
 </section>
 
 <!-- Achievements Timeline -->
-<section class="section-padding bg-black">
+<section class="section-padding section-gradient-2">
   <div class="container-custom">
     <h2 class="section-title text-center mb-12 ornate-heading" style="color: var(--color-accent-400);">Achievements & Training</h2>
 
@@ -73,7 +73,7 @@
       {#each achievements as item}
         <div class="traditional-card p-6 flex gap-6">
           <div class="flex-shrink-0">
-            <div class="w-20 h-20 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold text-sm">
+            <div class="w-20 h-20 bg-accent-500 rounded-full flex items-center justify-center text-primary-900 font-bold text-sm glow-gold">
               {item.year}
             </div>
           </div>
@@ -88,13 +88,13 @@
 </section>
 
 <!-- CTA -->
-<section class="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+<section class="section-padding bg-gradient-to-r from-primary-600 to-secondary-600 text-white gradient-mesh">
   <div class="container-custom text-center">
-    <h2 class="text-3xl font-bold mb-6">Ready to Learn from an Award-Winning Teacher?</h2>
+    <h2 class="text-3xl font-bold mb-6 text-glow-gold">Ready to Learn from an Award-Winning Teacher?</h2>
     <p class="text-xl mb-8 text-cream-100 max-w-2xl mx-auto">
       Experience traditional Bharatanatyam training in the Guru-Shishya Parampara tradition.
     </p>
-    <a href="/contact" class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all text-lg">
+    <a href="/contact" class="inline-block px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg transition-all text-lg glow-gold shimmer-effect" style="box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5), 0 4px 15px rgba(255, 215, 0, 0.3);">
       Book Your FREE Demo Class
     </a>
   </div>
