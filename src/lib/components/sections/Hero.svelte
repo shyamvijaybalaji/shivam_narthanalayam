@@ -17,14 +17,17 @@
   <div class="container-custom relative z-10">
     <div class="text-center animate-fade-in">
       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-        Welcome to <span class="text-gradient">Excellence</span>
+        Learn Authentic <span class="text-gradient">Bharatanatyam</span> Online or In-Person
       </h1>
-      <p class="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-        Building innovative solutions and delivering exceptional results for your business success
+      <p class="text-xl sm:text-2xl text-gray-600 mb-2 max-w-3xl mx-auto">
+        World-Class Training from Chennai, Available Globally
+      </p>
+      <p class="text-lg sm:text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
+        Award-Winning Teacher | Live 1-on-1 &amp; Group Classes
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <Button variant="primary" size="lg" on:click={scrollToContact}>
-          Get in Touch
+          Start Your FREE Online Trial Class
         </Button>
         <Button variant="outline" size="lg" on:click={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
           Learn More
