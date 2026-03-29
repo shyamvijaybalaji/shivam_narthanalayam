@@ -142,6 +142,97 @@
   </div>
 </section>
 
+<!-- Online Classes Section -->
+<section class="section-padding section-gradient-1">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="section-title ornate-heading text-accent-400">Learn from Anywhere in the World</h2>
+      <div class="h-1 w-24 bg-accent-500 mx-auto mb-4"></div>
+      <p class="text-cream-200 text-lg max-w-2xl mx-auto">
+        Join students from across the globe and experience authentic Bharatanatyam training — live, personal, and flexible.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <!-- Features -->
+      <div class="traditional-card p-8">
+        <h3 class="text-xl font-bold text-accent-400 mb-6">What You Get</h3>
+        <ul class="space-y-4">
+          {#each [
+            'Live interactive Zoom classes',
+            'Personalized attention & corrections',
+            'Flexible timings for global students',
+            'Recorded sessions for practice',
+            'Monthly progress assessments'
+          ] as feature}
+            <li class="flex items-center gap-3 text-gray-200">
+              <span class="text-accent-400 text-xl font-bold flex-shrink-0">✅</span>
+              <span class="text-lg">{feature}</span>
+            </li>
+          {/each}
+        </ul>
+
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <p class="text-sm text-cream-300 text-center italic">
+            🌍 Students learning from: <span class="text-accent-400 font-semibold">Singapore · Sweden · Florida · Bangalore · Delhi</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Pricing -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-accent-400 mb-6">Pricing Plans</h3>
+
+        <!-- Trial -->
+        <div class="traditional-card p-6 border-2 border-accent-500 relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-accent-500 text-primary-900 text-xs font-bold px-3 py-1">START HERE</div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-lg font-bold text-white">Trial Class</p>
+              <p class="text-sm text-cream-300">30 minutes · One-on-one</p>
+            </div>
+            <div class="text-right">
+              <p class="text-3xl font-bold text-accent-400">FREE</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1-on-1 -->
+        <div class="traditional-card p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-lg font-bold text-white">1-on-1 Online</p>
+              <p class="text-sm text-cream-300">8 classes per month</p>
+            </div>
+            <div class="text-right">
+              <p class="text-3xl font-bold text-accent-400">₹1,500</p>
+              <p class="text-xs text-cream-300">/ month</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group -->
+        <div class="traditional-card p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-lg font-bold text-white">Group Online</p>
+              <p class="text-sm text-cream-300">4 classes per month</p>
+            </div>
+            <div class="text-right">
+              <p class="text-3xl font-bold text-accent-400">₹1,000</p>
+              <p class="text-xs text-cream-300">/ month</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/contact" class="block w-full text-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold rounded-lg transition-all text-lg mt-4 glow-gold shimmer-effect" style="box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);">
+          Start Your FREE Online Trial Class
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Testimonials -->
 <section class="section-padding section-gradient-1">
   <div class="container-custom">
