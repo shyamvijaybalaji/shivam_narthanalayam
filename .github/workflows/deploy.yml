@@ -1,0 +1,77 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create .env file
+        run: |
+          cat > .env << 'ENVEOF'
+          PUBLIC_SUPABASE_URL=${{ secrets.PUBLIC_SUPABASE_URL }}
+          PUBLIC_SUPABASE_ANON_KEY=${{ secrets.PUBLIC_SUPABASE_ANON_KEY }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+          ADMIN_EMAIL=${{ secrets.ADMIN_EMAIL }}
+          PUBLIC_SITE_URL=${{ secrets.PUBLIC_SITE_URL }}
+          PUBLIC_SITE_NAME=Shivam Narthanalayam
+          PUBLIC_PHONE=+91-9600025105
+          PUBLIC_EMAIL=shivam@narthanalayam.in
+          ENVEOF
+
+      - name: Build for production
+        run: npm run build
+
+      - name: Deploy build/ via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: ${{ secrets.HOSTINGER_SERVER_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+
+      - name: Deploy package.json via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ${{ secrets.HOSTINGER_SERVER_ROOT }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.svelte-kit/**
+            **/build/**
+            **/src/**
+            **/.github/**
+            **/.claude/**
+            **.env*
+            **.png
+            **.jpeg
+            **.jpg
+            **.mp4
+            **.gz
