@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Seo from '$lib/components/Seo.svelte';
+  import { courseSchema } from '$lib/seo';
+
  const offlineBatches = [
     { name: 'Batch 1', days: 'Monday & Wednesday', time: '4:30 PM - 6:30 PM IST' },
     { name: 'Batch 2', days: 'Tuesday & Thursday', time: '4:30 PM - 6:30 PM IST' }
@@ -12,10 +15,11 @@
   ];
 </script>
 
-<svelte:head>
-  <title>Classes & Fees - Shivam Narthanalayam</title>
-  <meta name="description" content="Bharatanatyam classes in Chennai. Offline group classes ₹800/month. Online one-to-one ₹1000/month. FREE demo class. All ages welcome." />
-</svelte:head>
+<Seo
+  title="Bharatanatyam Classes & Fees in Chennai - Shivam Narthanalayam"
+  description="Bharatanatyam classes in Chennai — offline batches and live online one-on-one & group classes. Free demo class, all ages welcome. See timings & fees."
+  jsonLd={courseSchema}
+/>
 
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">

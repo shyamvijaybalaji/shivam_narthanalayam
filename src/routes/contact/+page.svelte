@@ -1,11 +1,12 @@
 <script lang="ts">
   import ContactForm from '$lib/components/ContactForm.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-  <title>Contact Us - Shivam Narthanalayam</title>
-  <meta name="description" content="Contact Shivam Narthanalayam for Bharatanatyam classes in Chennai. Call +91-9600025105 or email shivam@narthanalayam.in" />
-</svelte:head>
+<Seo
+  title="Contact Us - Shivam Narthanalayam"
+  description="Contact Shivam Narthanalayam for Bharatanatyam classes in Chennai. Call +91-9600025105 or email shivam@narthanalayam.in to book your free demo class."
+/>
 
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">

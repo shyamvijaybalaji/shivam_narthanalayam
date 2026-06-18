@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Seo from '$lib/components/Seo.svelte';
+  import { personSchema } from '$lib/seo';
+
   const achievements = [
     { year: '2006', title: 'Abhinaya Rani Award', desc: 'Recognized for excellence in Bharatanatyam performance' },
     { year: '2010-2021', title: 'Training under Renowned Gurus', desc: 'Prakash Krishna, Ratheesh Krishna, Sophia Ratheesh' },
@@ -6,10 +9,12 @@
   ];
 </script>
 
-<svelte:head>
-  <title>About Shruthi Sekar - Shivam Narthanalayam</title>
-  <meta name="description" content="Learn about Shruthi Sekar, award-winning Bharatanatyam teacher with 15+ years experience in Pandanallur Bani style." />
-</svelte:head>
+<Seo
+  title="About Shruthi Sekar - Shivam Narthanalayam"
+  description="Meet Shruthi Sekar, award-winning Bharatanatyam teacher with 15+ years' experience in the Pandanallur Bani (Kalakshetra) style. Recipient of the Abhinaya Rani Award 2006."
+  type="profile"
+  jsonLd={personSchema}
+/>
 
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">

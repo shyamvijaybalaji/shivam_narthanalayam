@@ -4,6 +4,7 @@
 	import Footer from '$lib/components/sections/Footer.svelte';
 	import WhatsAppButton from '$lib/components/WhatsAppButton.svelte';
 	import ChatBot from '$lib/components/ChatBot.svelte';
+	import { organizationSchema, websiteSchema } from '$lib/seo';
 
 	let { children } = $props();
 </script>
@@ -18,8 +19,11 @@
 	<link rel="apple-touch-icon" href="/logo.png" />
 
 	<!-- Meta tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="theme-color" content="#800020" />
+
+	<!-- Site-wide structured data (LocalBusiness + WebSite) -->
+	{@html `<script type="application/ld+json">${JSON.stringify(organizationSchema)}<\/script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(websiteSchema)}<\/script>`}
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
