@@ -1,9 +1,19 @@
 import OpenAI from 'openai';
 import { OPENAI_API_KEY } from '$env/static/private';
 
-const client = new OpenAI({
-  apiKey: OPENAI_API_KEY
-});
+// Lazy initialization so importing this module at build time (SvelteKit's
+// analyse/prerender step) does not require the API key to be present.
+let clientInstance: OpenAI | null = null;
+
+function getClient(): OpenAI {
+  if (!clientInstance) {
+    if (!OPENAI_API_KEY) {
+      throw new Error('OPENAI_API_KEY is not configured.');
+    }
+    clientInstance = new OpenAI({ apiKey: OPENAI_API_KEY });
+  }
+  return clientInstance;
+}
 
 const SYSTEM_PROMPT = `You are a helpful assistant for Shivam Narthanalayam, a Bharatanatyam dance academy in Chennai.
 
@@ -52,7 +62,7 @@ export async function getChatbotResponse(userMessage: string, conversationHistor
       { role: 'user', content: userMessage }
     ];
 
-    const response = await client.chat.completions.create({
+    const response = await getClient().chat.completions.create({
       model: 'gpt-4',
       messages: messages as any,
       temperature: 0.7,

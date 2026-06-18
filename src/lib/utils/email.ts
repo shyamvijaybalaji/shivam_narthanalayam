@@ -1,7 +1,19 @@
 import { Resend } from 'resend';
 import { RESEND_API_KEY, ADMIN_EMAIL } from '$env/static/private';
 
-const resend = new Resend(RESEND_API_KEY);
+// Lazy initialization so importing this module at build time (SvelteKit's
+// analyse/prerender step) does not require the API key to be present.
+let resendInstance: Resend | null = null;
+
+function getResend(): Resend {
+  if (!resendInstance) {
+    if (!RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured.');
+    }
+    resendInstance = new Resend(RESEND_API_KEY);
+  }
+  return resendInstance;
+}
 
 interface ContactFormData {
   name: string;
@@ -33,7 +45,7 @@ export async function sendContactFormEmail(data: ContactFormData) {
       <p><small>Submitted at: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</small></p>
     `;
 
-    const { data: emailData, error } = await resend.emails.send({
+    const { data: emailData, error } = await getResend().emails.send({
       from: 'Shivam Narthanalayam <noreply@shivamnarthanalayam.com>',
       to: [ADMIN_EMAIL],
       replyTo: data.email,
@@ -70,7 +82,7 @@ export async function sendChatbotLeadEmail(data: ChatbotLeadData) {
       <p><small>Captured at: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</small></p>
     `;
 
-    const { data: emailData, error } = await resend.emails.send({
+    const { data: emailData, error } = await getResend().emails.send({
       from: 'Shivam Narthanalayam Chatbot <noreply@shivamnarthanalayam.com>',
       to: [ADMIN_EMAIL],
       replyTo: data.email,
