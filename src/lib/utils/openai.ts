@@ -39,7 +39,13 @@ ONLINE ONE-TO-ONE CLASSES:
 - Platform: Zoom
 - Schedule: Flexible timing arranged with student
 - Frequency: 8 classes/month (typically 2x per week)
+- Fee: ₹1,500/month
+
+ONLINE GROUP CLASSES:
+- Platform: Zoom
+- Frequency: 4 classes/month
 - Fee: ₹1,000/month
+- Trial Class: FREE 1 demo class
 
 ENROLLMENT PROCESS:
 1. Student visits academy for free demo class
