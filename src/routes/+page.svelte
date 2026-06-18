@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Seo from '$lib/components/Seo.svelte';
+
   const highlights = [
     { icon: '🏆', title: 'Award-Winning Teacher', desc: 'Abhinaya Rani Award 2006' },
     { icon: '📚', title: '15+ Years Experience', desc: 'Training & Teaching Combined' },
@@ -13,11 +15,10 @@
   ];
 </script>
 
-<svelte:head>
-  <title>Shivam Narthanalayam - Bharatanatyam Dance Academy in Chennai</title>
-  <meta name="description" content="Learn authentic Bharatanatyam in Chennai under Shruthi Sekar. Pandanallur Bani (Kalakshetra style). Free demo class. All ages welcome. Offline & online classes available." />
-  <meta name="keywords" content="Bharatanatyam, dance classes Chennai, Kalakshetra style, Pandanallur Bani, classical dance, Guru-Shishya Parampara, Pudur Chennai" />
-</svelte:head>
+<Seo
+  title="Bharatanatyam Classes in Chennai | Shivam Narthanalayam"
+  description="Learn authentic Bharatanatyam in Chennai with award-winning teacher Shruthi Sekar. Pandanallur (Kalakshetra) style. Free demo class — online & offline."
+/>
 
 <!-- Video Section with Bharatanatyam Description -->
 <section class="relative w-full section-gradient-1">

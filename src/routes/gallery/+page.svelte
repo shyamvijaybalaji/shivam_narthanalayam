@@ -1,7 +1,11 @@
-<svelte:head>
-  <title>Gallery - Shivam Narthanalayam</title>
-  <meta name="description" content="View photos and videos of Bharatanatyam performances and classes at Shivam Narthanalayam." />
-</svelte:head>
+<script lang="ts">
+  import Seo from '$lib/components/Seo.svelte';
+</script>
+
+<Seo
+  title="Gallery - Shivam Narthanalayam"
+  description="View photos from Bharatanatyam performances and classes at Shivam Narthanalayam, Shruthi Sekar's dance academy in Chennai."
+/>
 
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">
