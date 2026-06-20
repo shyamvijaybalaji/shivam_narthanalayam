@@ -9,8 +9,6 @@ const pages = [
 	{ path: '/contact', priority: '0.8', changefreq: 'yearly' }
 ];
 
-export const prerender = true;
-
 export const GET: RequestHandler = () => {
 	const lastmod = new Date().toISOString().split('T')[0];
 
