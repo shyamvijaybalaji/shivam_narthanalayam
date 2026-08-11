@@ -11,6 +11,8 @@
           <img
             src="/logo.png"
             alt="Shivam Narthanalayam Logo"
+            width="48"
+            height="48"
             class="w-12 h-12 object-contain"
           />
           <div>

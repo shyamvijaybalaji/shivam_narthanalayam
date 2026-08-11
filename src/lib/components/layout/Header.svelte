@@ -22,6 +22,8 @@
           <img
             src="/logo.png"
             alt="Shivam Narthanalayam Logo"
+            width="64"
+            height="64"
             class="w-14 h-14 sm:w-16 sm:h-16 object-contain group-hover:scale-105 transition-transform"
           />
           <div class="hidden sm:block">

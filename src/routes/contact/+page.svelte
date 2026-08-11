@@ -19,6 +19,12 @@
 <!-- Contact Section -->
 <section class="section-padding section-gradient-1">
   <div class="container-custom">
+    <p class="max-w-3xl mx-auto text-center text-gray-300 mb-12 leading-relaxed">
+      Ready to begin your Bharatanatyam journey? Whether you'd like to book a free demo class, ask about our
+      offline batches in Pudur, Chennai, or join our live online classes from anywhere in the world, we're
+      always happy to help. Reach out by phone, email, or the form below, and Shruthi will personally get
+      back to you to guide you on the right class and level for you or your child.
+    </p>
     <div class="grid lg:grid-cols-2 gap-12">
       <!-- Contact Form -->
       <div>

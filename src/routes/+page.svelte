@@ -26,7 +26,7 @@
     <div class="grid lg:grid-cols-12 gap-6 items-center">
       <!-- Left Text -->
       <div class="lg:col-span-3 text-center lg:text-right">
-        <h3 class="text-xl font-bold text-accent-400 mb-3">The Art of Bharatanatyam</h3>
+        <p class="text-xl font-bold text-accent-400 mb-3">The Art of Bharatanatyam</p>
         <p class="text-cream-200 text-sm leading-relaxed">
           A classical dance form that tells stories through graceful movements, expressions, and rhythmic footwork.
         </p>
@@ -52,7 +52,7 @@
 
       <!-- Right Text -->
       <div class="lg:col-span-3 text-center lg:text-left">
-        <h3 class="text-xl font-bold text-accent-400 mb-3">Ancient Tradition</h3>
+        <p class="text-xl font-bold text-accent-400 mb-3">Ancient Tradition</p>
         <p class="text-cream-200 text-sm leading-relaxed">
           Rooted in the temples of Tamil Nadu, Bharatanatyam embodies devotion, beauty, and cultural heritage.
         </p>
@@ -69,6 +69,8 @@
         <img
           src="/logo.png"
           alt="Shivam Narthanalayam Logo"
+          width="96"
+          height="96"
           class="w-24 h-24 object-contain"
         />
       </div>
@@ -92,7 +94,7 @@
         Book Your FREE Demo Class
       </a>
       <a href="/about" class="px-8 py-4 glass text-white font-semibold rounded-lg border-2 border-accent-400 transition-all text-lg hover:glow-gold">
-        Learn More
+        Learn About Our Academy
       </a>
     </div>
   </div>
@@ -105,7 +107,7 @@
       {#each highlights as item}
         <div class="traditional-card p-6 text-center hover:scale-105 transition-transform">
           <div class="text-5xl mb-4">{item.icon}</div>
-          <h3 class="font-bold text-lg mb-2 text-accent-400">{item.title}</h3>
+          <h2 class="font-bold text-lg mb-2 text-accent-400">{item.title}</h2>
           <p class="text-sm text-gray-300">{item.desc}</p>
         </div>
       {/each}
@@ -136,6 +138,8 @@
         <img
           src="/gallery/gallery-1.jpeg"
           alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
+          width="600"
+          height="600"
           class="w-full h-full object-cover"
         />
       </div>

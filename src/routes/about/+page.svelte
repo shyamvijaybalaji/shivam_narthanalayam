@@ -11,7 +11,7 @@
 
 <Seo
   title="About Shruthi Sekar - Shivam Narthanalayam"
-  description="Meet Shruthi Sekar, award-winning Bharatanatyam teacher with 15+ years' experience in the Pandanallur Bani (Kalakshetra) style. Recipient of the Abhinaya Rani Award 2006."
+  description="Meet Shruthi Sekar, award-winning Bharatanatyam teacher in Chennai with 15+ years in the Pandanallur Bani (Kalakshetra) style. Abhinaya Rani Award 2006."
   type="profile"
   jsonLd={personSchema}
 />
@@ -31,6 +31,8 @@
       <img
         src="/gallery/gallery-1.jpeg"
         alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
+        width="600"
+        height="600"
         class="w-full h-full object-cover"
       />
     </div>

@@ -16,7 +16,7 @@
 </script>
 
 <Seo
-  title="Bharatanatyam Classes & Fees in Chennai - Shivam Narthanalayam"
+  title="Bharatanatyam Classes & Fees | Shivam Narthanalayam"
   description="Bharatanatyam classes in Chennai — offline batches and live online one-on-one & group classes. Free demo class, all ages welcome. See timings & fees."
   jsonLd={courseSchema}
 />

@@ -20,12 +20,24 @@
   <div class="container-custom">
     <h2 class="text-2xl font-bold mb-8 text-center text-glow-gold" style="color: var(--color-accent-400);">Performance & Class Photos</h2>
 
+    <p class="max-w-3xl mx-auto text-center text-gray-300 mb-10 leading-relaxed">
+      Explore moments from Shivam Narthanalayam — our students performing on stage, arangetram debuts,
+      annual-day showcases, and everyday practice in the classroom. These photographs capture the grace,
+      discipline, and joy of learning Bharatanatyam in the traditional Pandanallur Bani (Kalakshetra) style
+      under Shruthi Sekar. From a child's very first adavu to a graduate's full margam, each image reflects
+      our commitment to preserving classical Indian dance here in Pudur and across Chennai. Whether you are
+      considering offline classes at our Pudur studio or joining our live online sessions from anywhere in
+      the world, we hope these glimpses inspire you to begin your own journey in this timeless art form.
+    </p>
+
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {#each Array(17) as _, i}
         <div class="aspect-square rounded-lg overflow-hidden hover:scale-105 transition-all cursor-pointer" style="box-shadow: 0 4px 20px rgba(128, 0, 32, 0.3), 0 2px 10px rgba(255, 215, 0, 0.2);">
           <img
             src="/gallery/gallery-{i + 2}.jpeg"
             alt="Bharatanatyam dance performance or class at Shivam Narthanalayam - Photo {i + 2}"
+            width="600"
+            height="600"
             class="w-full h-full object-cover hover:scale-110 transition-transform"
             loading="lazy"
           />
