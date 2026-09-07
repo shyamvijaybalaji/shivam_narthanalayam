@@ -19,11 +19,16 @@
       <!-- Logo/Brand -->
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center space-x-3 group">
-          <img
-            src="/logo.png"
-            alt="Shivam Narthanalayam Logo"
-            class="w-14 h-14 sm:w-16 sm:h-16 object-contain group-hover:scale-105 transition-transform"
-          />
+          <picture>
+            <source srcset="/logo.webp" type="image/webp" />
+            <img
+              src="/logo.png"
+              alt="Shivam Narthanalayam Logo"
+              class="w-14 h-14 sm:w-16 sm:h-16 object-contain group-hover:scale-105 transition-transform"
+              width="64"
+              height="64"
+            />
+          </picture>
           <div class="hidden sm:block">
             <p class="font-bold text-lg leading-none text-accent-400">Shivam Narthanalayam</p>
             <p class="text-xs leading-none mt-1 text-gray-300">Bharatanatyam Academy</p>

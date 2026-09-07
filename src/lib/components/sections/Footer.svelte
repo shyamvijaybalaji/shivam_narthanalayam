@@ -8,11 +8,16 @@
       <!-- Brand -->
       <div class="md:col-span-2">
         <div class="flex items-center space-x-3 mb-4">
-          <img
-            src="/logo.png"
-            alt="Shivam Narthanalayam Logo"
-            class="w-12 h-12 object-contain"
-          />
+          <picture>
+            <source srcset="/logo.webp" type="image/webp" />
+            <img
+              src="/logo.png"
+              alt="Shivam Narthanalayam Logo"
+              class="w-12 h-12 object-contain"
+              width="48"
+              height="48"
+            />
+          </picture>
           <div>
             <h3 class="text-xl font-bold text-accent-400">Shivam Narthanalayam</h3>
             <p class="text-sm text-cream-200">Bharatanatyam Dance Academy</p>

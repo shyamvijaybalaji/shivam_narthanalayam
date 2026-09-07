@@ -106,13 +106,16 @@
   <div class="container-custom relative z-10 text-center text-white py-20">
     <div class="mb-6">
       <div class="w-24 h-24 mx-auto flex items-center justify-center mb-6 animate-pulse-subtle glow-gold-strong rounded-full">
-        <img
-          src="/logo.png"
-          alt="Shivam Narthanalayam Logo"
-          class="w-24 h-24 object-contain"
-          width="96"
-          height="96"
-        />
+        <picture>
+          <source srcset="/logo.webp" type="image/webp" />
+          <img
+            src="/logo.png"
+            alt="Shivam Narthanalayam Logo"
+            class="w-24 h-24 object-contain"
+            width="96"
+            height="96"
+          />
+        </picture>
       </div>
     </div>
 
