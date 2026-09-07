@@ -27,7 +27,6 @@
       a: 'Call or WhatsApp +91-9600025105, email shivam@narthanalayam.in, or fill the contact form at shivamnarthanalayam.com/contact. The 30-minute trial class is free with no obligation.'
     }
   ];
->>>>>>> b4243c6 (SEO: structured data, security headers, image compression, llms.txt, FAQ section)
 
   const highlights = [
     { icon: '🏆', title: 'Award-Winning Teacher', desc: 'Abhinaya Rani Award 2006' },
