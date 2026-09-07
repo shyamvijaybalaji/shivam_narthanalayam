@@ -20,6 +20,7 @@
 
 	<!-- Meta tags -->
 	<meta name="theme-color" content="#800020" />
+	<meta name="google-site-verification" content="EC-jBCPiWz08F3p_52H9dzg7rG_IYSntD-jeOLXsAKA" />
 
 	<!-- Site-wide structured data (LocalBusiness + WebSite) -->
 	{@html `<script type="application/ld+json">${JSON.stringify(organizationSchema)}<\/script>`}
