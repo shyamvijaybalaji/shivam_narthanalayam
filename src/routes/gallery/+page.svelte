@@ -7,6 +7,17 @@
   description="View photos from Bharatanatyam performances and classes at Shivam Narthanalayam, Shruthi Sekar's dance academy in Chennai."
 />
 
+<svelte:head>
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shivamnarthanalayam.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.shivamnarthanalayam.com/gallery" }
+    ]
+  })}<\/script>`}
+</svelte:head>
+
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">
   <div class="container-custom text-center">
@@ -18,7 +29,10 @@
 <!-- Photo Grid -->
 <section class="section-padding section-gradient-1">
   <div class="container-custom">
-    <h2 class="text-2xl font-bold mb-8 text-center text-glow-gold" style="color: var(--color-accent-400);">Performance & Class Photos</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center text-glow-gold" style="color: var(--color-accent-400);">Performance & Class Photos</h2>
+    <p class="text-center text-cream-200 mb-8 max-w-2xl mx-auto">
+      Explore moments captured from our Bharatanatyam performances, arangetrams, and daily classes at Shivam Narthanalayam. Each photo tells the story of dedication, artistry, and the joy of classical Indian dance.
+    </p>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {#each Array(17) as _, i}
@@ -28,6 +42,8 @@
             alt="Bharatanatyam dance performance or class at Shivam Narthanalayam - Photo {i + 2}"
             class="w-full h-full object-cover hover:scale-110 transition-transform"
             loading="lazy"
+            width="400"
+            height="400"
           />
         </div>
       {/each}

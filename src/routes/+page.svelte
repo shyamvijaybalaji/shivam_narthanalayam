@@ -1,6 +1,34 @@
 <script lang="ts">
   import Seo from '$lib/components/Seo.svelte';
 
+  const faqs = [
+    {
+      q: 'What is Bharatanatyam?',
+      a: 'Bharatanatyam is one of India\'s oldest classical dance forms, originating from the temples of Tamil Nadu. It combines expressive storytelling (abhinaya), rhythmic footwork (nritta), and devotional themes rooted in Hindu mythology.'
+    },
+    {
+      q: 'What is Pandanallur Bani (Kalakshetra style)?',
+      a: 'Pandanallur Bani is a Bharatanatyam style known for its precise geometric body lines, strong rhythmic footwork, and restrained expressions. Popularised through the Kalakshetra institution, it is considered one of the most technically pure forms.'
+    },
+    {
+      q: 'Do I need prior dance experience to join?',
+      a: 'No prior experience is needed. Classes welcome complete beginners through advanced students. The curriculum is structured to build from foundational movements upward at your own pace.'
+    },
+    {
+      q: 'Are online Bharatanatyam classes as effective?',
+      a: 'Yes. Live Zoom sessions allow real-time corrections and personal attention. Sessions can also be recorded for practice. Students from Singapore, Sweden, Florida, Bangalore, and Delhi currently learn online.'
+    },
+    {
+      q: 'What are the class fees at Shivam Narthanalayam?',
+      a: 'Offline group classes: ₹800/month. Online group classes: ₹800/month. Online one-to-one: ₹1,000/month (8 classes). Admission fee: ₹1,000 one-time. Trial/demo class is FREE for all formats.'
+    },
+    {
+      q: 'How do I book a free demo class?',
+      a: 'Call or WhatsApp +91-9600025105, email shivam@narthanalayam.in, or fill the contact form at shivamnarthanalayam.com/contact. The 30-minute trial class is free with no obligation.'
+    }
+  ];
+>>>>>>> b4243c6 (SEO: structured data, security headers, image compression, llms.txt, FAQ section)
+
   const highlights = [
     { icon: '🏆', title: 'Award-Winning Teacher', desc: 'Abhinaya Rani Award 2006' },
     { icon: '📚', title: '15+ Years Experience', desc: 'Training & Teaching Combined' },
@@ -19,6 +47,19 @@
   title="Bharatanatyam Classes in Chennai | Shivam Narthanalayam"
   description="Learn authentic Bharatanatyam in Chennai with award-winning teacher Shruthi Sekar. Pandanallur (Kalakshetra) style. Free demo class — online & offline."
 />
+
+<svelte:head>
+  <meta name="keywords" content="Bharatanatyam, dance classes Chennai, Kalakshetra style, Pandanallur Bani, classical dance, Guru-Shishya Parampara, Pudur Chennai" />
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  })}<\/script>`}
+</svelte:head>
 
 <!-- Video Section with Bharatanatyam Description -->
 <section class="relative w-full section-gradient-1">
@@ -70,6 +111,8 @@
           src="/logo.png"
           alt="Shivam Narthanalayam Logo"
           class="w-24 h-24 object-contain"
+          width="96"
+          height="96"
         />
       </div>
     </div>
@@ -137,6 +180,8 @@
           src="/gallery/gallery-1.jpeg"
           alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
           class="w-full h-full object-cover"
+          width="600"
+          height="600"
         />
       </div>
     </div>
@@ -245,6 +290,24 @@
           <p class="mb-4 italic text-gray-300">{item.quote}</p>
           <p class="font-semibold text-accent-400">— {item.name}</p>
         </div>
+      {/each}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-padding section-gradient-2">
+  <div class="container-custom max-w-3xl">
+    <h2 class="section-title text-center mb-10 ornate-heading text-accent-400">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {#each faqs as faq, i}
+        <details class="traditional-card p-0 group">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer list-none select-none">
+            <span class="font-semibold text-accent-300">{faq.q}</span>
+            <span class="ml-4 text-accent-400 text-xl transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="px-6 pb-5 text-gray-300 leading-relaxed">{faq.a}</p>
+        </details>
       {/each}
     </div>
   </div>

@@ -1,5 +1,5 @@
-# allow crawling everything by default
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /api/
 
 Sitemap: https://www.shivamnarthanalayam.com/sitemap.xml

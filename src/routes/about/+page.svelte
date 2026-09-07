@@ -16,6 +16,17 @@
   jsonLd={personSchema}
 />
 
+<svelte:head>
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shivamnarthanalayam.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.shivamnarthanalayam.com/about" }
+    ]
+  })}<\/script>`}
+</svelte:head>
+
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">
   <div class="container-custom text-center">
@@ -32,6 +43,8 @@
         src="/gallery/gallery-1.jpeg"
         alt="Shruthi Sekar - Bharatanatyam Teacher at Shivam Narthanalayam"
         class="w-full h-full object-cover"
+        width="448"
+        height="448"
       />
     </div>
 
