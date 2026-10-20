@@ -23,12 +23,12 @@ export const handle: Handle = async ({ event, resolve }) => {
 		'Content-Security-Policy',
 		[
 			"default-src 'self'",
-			"script-src 'self' 'unsafe-inline'",
+			"script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
 			"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
 			"font-src 'self' https://fonts.gstatic.com",
 			"img-src 'self' data: https:",
 			"media-src 'self'",
-			"connect-src 'self' https://*.supabase.co https://api.openai.com https://api.resend.com",
+			"connect-src 'self' https://*.supabase.co https://api.openai.com https://api.resend.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://stats.g.doubleclick.net",
 			"frame-src https://www.google.com",
 			"object-src 'none'",
 			"base-uri 'self'"

@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { submitEnquiry } from '$lib/utils/supabase';
 import { sendContactFormEmail } from '$lib/utils/email';
+import { sendWhatsAppEnquiryAlert } from '$lib/utils/whatsapp';
 
 function validateEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -42,7 +43,7 @@ export const POST: RequestHandler = async ({ request }) => {
       throw new Error(enquiryResult.error);
     }
 
-    // Send email notification
+    // Send email notification (non-blocking — failure doesn't affect user)
     const emailResult = await sendContactFormEmail({
       name: data.name.trim(),
       email: data.email.trim(),
@@ -53,6 +54,19 @@ export const POST: RequestHandler = async ({ request }) => {
 
     if (!emailResult.success) {
       console.error('Failed to send email notification:', emailResult.error);
+    }
+
+    // Send WhatsApp notification to Sruthi (non-blocking)
+    const waResult = await sendWhatsAppEnquiryAlert({
+      name: data.name.trim(),
+      email: data.email.trim(),
+      phone: data.phone?.trim(),
+      message: data.message.trim(),
+      preferredClassType: data.preferredClassType
+    });
+
+    if (!waResult.success && waResult.reason !== 'not_configured') {
+      console.error('Failed to send WhatsApp notification:', waResult.error);
     }
 
     return json({

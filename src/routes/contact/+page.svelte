@@ -17,8 +17,9 @@
       { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.shivamnarthanalayam.com/contact" }
     ]
   })}<\/script>`}
+
+  {@html `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Shivam Narthanalayam located?","acceptedAnswer":{"@type":"Answer","text":"Shivam Narthanalayam is at Little Millennium Play School, Pudur, Ambattur, Chennai, Tamil Nadu 600053."}},{"@type":"Question","name":"How can I contact Shivam Narthanalayam?","acceptedAnswer":{"@type":"Answer","text":"Call or WhatsApp +91-9600025105 or email shivam@narthanalayam.in."}},{"@type":"Question","name":"What are the class timings?","acceptedAnswer":{"@type":"Answer","text":"Offline classes: Tuesday, Thursday, Saturday, Sunday 5:00 PM to 6:30 PM IST. Online one-to-one: flexible timings."}}]})}<\/script>`}
 </svelte:head>
->>>>>>> b4243c6 (SEO: structured data, security headers, image compression, llms.txt, FAQ section)
 
 <!-- Hero -->
 <section class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20 gradient-mesh">
@@ -96,8 +97,8 @@
           <div class="traditional-card p-6">
             <h3 class="font-bold mb-3 text-accent-400">Class Timings</h3>
             <div class="space-y-2 text-sm text-gray-200">
-              <p><strong>Batch 1:</strong> Mon & Wed, 4:30-6:30 PM</p>
-              <p><strong>Batch 2:</strong> Tue & Thu, 4:30-6:30 PM</p>
+              <p><strong>Batch 1:</strong> Tue & Thu, 5:00-6:30 PM</p>
+              <p><strong>Batch 2:</strong> Sat & Sun, 5:00-6:30 PM</p>
               <p><strong>Online:</strong> Flexible timing</p>
             </div>
           </div>

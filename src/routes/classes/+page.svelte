@@ -3,8 +3,8 @@
   import { courseSchema } from '$lib/seo';
 
  const offlineBatches = [
-    { name: 'Batch 1', days: 'Monday & Wednesday', time: '4:30 PM - 6:30 PM IST' },
-    { name: 'Batch 2', days: 'Tuesday & Thursday', time: '4:30 PM - 6:30 PM IST' }
+    { name: 'Batch 1', days: 'Tuesday & Thursday', time: '5:00 PM - 6:30 PM IST' },
+    { name: 'Batch 2', days: 'Saturday & Sunday', time: '5:00 PM - 6:30 PM IST' }
   ];
 
   const enrollmentSteps = [

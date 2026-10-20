@@ -17,7 +17,8 @@ export const SITE = {
 	social: [
 		'https://www.instagram.com/shivam_narthanalayam',
 		'https://youtube.com/@shivamnarthanalayam',
-		'https://wa.me/919600025105'
+		'https://wa.me/919600025105',
+		'https://www.facebook.com/shivamnarthanalayam'
 	]
 };
 
@@ -48,7 +49,21 @@ export const organizationSchema = {
 	},
 	areaServed: ['Chennai', 'Worldwide (online classes)'],
 	knowsAbout: ['Bharatanatyam', 'Pandanallur Bani', 'Kalakshetra style', 'Indian classical dance'],
-	sameAs: SITE.social
+	sameAs: SITE.social,
+	openingHoursSpecification: [
+		{
+			"@type": "OpeningHoursSpecification",
+			dayOfWeek: ["Tuesday", "Thursday"],
+			opens: "17:00",
+			closes: "18:30"
+		},
+		{
+			"@type": "OpeningHoursSpecification",
+			dayOfWeek: ["Saturday", "Sunday"],
+			opens: "17:00",
+			closes: "18:30"
+		}
+	]
 	// Note: aggregateRating intentionally omitted — only add it once real,
 	// verifiable reviews exist, or Google may flag it.
 };

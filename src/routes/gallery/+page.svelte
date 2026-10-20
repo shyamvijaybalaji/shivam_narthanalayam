@@ -3,8 +3,8 @@
 </script>
 
 <Seo
-  title="Gallery - Shivam Narthanalayam"
-  description="View photos from Bharatanatyam performances and classes at Shivam Narthanalayam, Shruthi Sekar's dance academy in Chennai."
+  title="Bharatanatyam Performance Gallery - Shivam Narthanalayam Chennai"
+  description="Browse photos and videos from Bharatanatyam performances, arangetrams and classes at Shivam Narthanalayam — Shruthi Sekar's dance academy in Pudur, Chennai."
 />
 
 <svelte:head>
