@@ -118,7 +118,7 @@
             <thead>
               <tr>
                 <th>Date</th><th>Name</th><th>Email</th><th>Phone</th>
-                <th>Class</th><th>Source</th><th>Message</th>
+                <th>Country</th><th>Class</th><th>Source</th><th>Message</th>
               </tr>
             </thead>
             <tbody>
@@ -128,6 +128,7 @@
                   <td>{e.name}</td>
                   <td><a href="mailto:{e.email}">{e.email}</a></td>
                   <td>{e.phone ?? "—"}</td>
+                  <td>{e.country ?? "—"}</td>
                   <td><span class="badge {e.preferred_class_type ?? 'unspec'}">{e.preferred_class_type ?? "—"}</span></td>
                   <td><span class="badge src">{e.source === "contact_form" ? "form" : (e.source ?? "?")}</span></td>
                   <td class="msg-cell">{e.message ?? "—"}</td>

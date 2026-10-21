@@ -98,6 +98,9 @@
     outline: none;
     transition: border-color 0.15s;
     box-sizing: border-box;
+    color: #1a1a1a;
+    caret-color: #1a1a1a;
+    background: white;
   }
 
   input:focus {
