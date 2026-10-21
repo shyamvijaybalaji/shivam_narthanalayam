@@ -30,6 +30,7 @@ export interface Enquiry {
   phone?: string;
   message?: string;
   preferred_class_type?: string;
+  country?: string;
   source?: string;
   created_at?: string;
 }
@@ -69,6 +70,7 @@ export async function submitEnquiry(enquiry: Enquiry) {
       phone: enquiry.phone,
       message: enquiry.message,
       preferred_class_type: enquiry.preferred_class_type,
+      country: enquiry.country,
       source: enquiry.source || 'contact_form',
       created_at: new Date().toISOString()
     }])

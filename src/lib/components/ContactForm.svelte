@@ -6,6 +6,7 @@
   let phone = '';
   let message = '';
   let preferredClassType = '';
+  let country = '';
   let isSubmitting = false;
   let submitStatus: 'idle' | 'success' | 'error' = 'idle';
   let errorMessage = '';
@@ -29,6 +30,7 @@
           name,
           email,
           phone,
+          country,
           message,
           preferredClassType
         })
@@ -51,6 +53,7 @@
       phone = '';
       message = '';
       preferredClassType = '';
+      country = '';
 
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -108,6 +111,20 @@
       bind:value={phone}
       class="input-field w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-200 transition-colors"
       placeholder="+91-XXXXXXXXXX"
+    />
+  </div>
+
+  <!-- Country Field -->
+  <div>
+    <label for="country" class="block text-sm font-medium mb-2 text-gray-200">
+      Country
+    </label>
+    <input
+      type="text"
+      id="country"
+      bind:value={country}
+      class="input-field w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-200 transition-colors"
+      placeholder="e.g. India, Finland, Philippines"
     />
   </div>
 

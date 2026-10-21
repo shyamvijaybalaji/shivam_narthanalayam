@@ -19,6 +19,7 @@ interface ContactFormData {
   name: string;
   email: string;
   phone?: string;
+  country?: string;
   message: string;
   preferredClassType?: string;
 }
@@ -38,6 +39,7 @@ export async function sendContactFormEmail(data: ContactFormData) {
       <p><strong>Name:</strong> ${data.name}</p>
       <p><strong>Email:</strong> ${data.email}</p>
       ${data.phone ? `<p><strong>Phone:</strong> ${data.phone}</p>` : ''}
+      ${data.country ? `<p><strong>Country:</strong> ${data.country}</p>` : ''}
       ${data.preferredClassType ? `<p><strong>Preferred Class:</strong> ${data.preferredClassType}</p>` : ''}
       <p><strong>Message:</strong></p>
       <p>${data.message.replace(/\n/g, '<br>')}</p>

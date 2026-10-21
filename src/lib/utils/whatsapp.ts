@@ -4,6 +4,7 @@ interface EnquiryData {
   name: string;
   email: string;
   phone?: string;
+  country?: string;
   message: string;
   preferredClassType?: string;
 }
@@ -15,6 +16,7 @@ function buildMessage(data: EnquiryData): string {
     `👤 *Name:* ${data.name}`,
     `📧 *Email:* ${data.email}`,
     data.phone ? `📱 *Phone:* ${data.phone}` : null,
+    data.country ? `🌍 *Country:* ${data.country}` : null,
     data.preferredClassType ? `💃 *Class:* ${data.preferredClassType}` : null,
     ``,
     `💬 *Message:*`,
