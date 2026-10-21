@@ -26,7 +26,7 @@
       <span class="logo">🪔</span>
       <div>
         <h1>Shivam Narthanalayam</h1>
-        <p>Business Dashboard</p>
+        <p>Business Dashboard · Live</p>
       </div>
     </div>
     <form method="POST" action="?/logout">
