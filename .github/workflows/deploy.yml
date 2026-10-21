@@ -18,9 +18,13 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh -i ~/.ssh/deploy_key root@72.61.233.12 "
-            cd /var/www/shivam_narthanalayam &&
-            git pull origin main &&
-            docker-compose up --build -d &&
-            echo 'Deploy complete'
-          "
+          ssh -i ~/.ssh/deploy_key \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=20 \
+            root@72.61.233.12 bash << 'ENDSSH'
+            set -e
+            cd /var/www/shivam_narthanalayam
+            git pull origin main
+            docker-compose up --build -d
+            echo "✅ Deploy complete at $(date)"
+          ENDSSH
