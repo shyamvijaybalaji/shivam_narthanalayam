@@ -128,6 +128,13 @@
     />
   </div>
 
+  <!-- Studio Callout -->
+  <div class="p-4 rounded-xl border-2 border-accent-400 bg-primary-800/20">
+    <p class="text-sm font-semibold text-accent-400 mb-1">📍 Studio in Pudur, Ambattur, Chennai</p>
+    <p class="text-xs text-gray-300">Offline group classes · Tue &amp; Thu &amp; Sat &amp; Sun · 5:00–6:30 PM · ₹800/month</p>
+    <p class="text-xs text-gray-400 mt-1">Local to Chennai? Come join us in person for the full Bharatanatyam experience!</p>
+  </div>
+
   <!-- Preferred Class Type -->
   <div>
     <label for="classType" class="block text-sm font-medium mb-2 text-gray-200">
@@ -139,7 +146,7 @@
       class="input-field w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-200 transition-colors"
     >
       <option value="">Select a class type</option>
-      <option value="offline">Offline Group Classes</option>
+      <option value="offline">Offline Group Classes (Studio, Pudur, Chennai)</option>
       <option value="online">Online One-to-One Classes</option>
       <option value="both">Both (I'd like to know more)</option>
     </select>

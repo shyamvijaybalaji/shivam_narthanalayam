@@ -32,7 +32,7 @@
     { icon: '🏆', title: 'Award-Winning Teacher', desc: 'Abhinaya Rani Award 2006' },
     { icon: '📚', title: '15+ Years Experience', desc: 'Training & Teaching Combined' },
     { icon: '👥', title: 'All Ages Welcome', desc: 'Beginner to Advanced Levels' },
-    { icon: '🎭', title: 'Traditional Style', desc: 'Guru-Shishya Parampara' }
+    { icon: '📍', title: 'Studio in Chennai', desc: 'Offline classes in Pudur, Ambattur' }
   ];
 
   const testimonials = [

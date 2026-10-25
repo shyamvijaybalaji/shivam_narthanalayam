@@ -108,12 +108,38 @@
   </div>
 </section>
 
-<!-- Map -->
-<section class="section-gradient-2 py-8">
+<!-- Why Join In Person? -->
+<section class="section-padding section-gradient-2">
   <div class="container-custom">
+    <h2 class="text-2xl font-bold text-center mb-8 text-accent-400">Why Join In Person?</h2>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="traditional-card p-6 text-center">
+        <div class="text-3xl mb-3">🎭</div>
+        <h3 class="font-bold text-accent-400 mb-2">Hands-On Corrections</h3>
+        <p class="text-sm text-gray-200">Real-time posture and mudra corrections that are far more effective in person.</p>
+      </div>
+      <div class="traditional-card p-6 text-center">
+        <div class="text-3xl mb-3">👥</div>
+        <h3 class="font-bold text-accent-400 mb-2">Group Energy</h3>
+        <p class="text-sm text-gray-200">Learn alongside peers, build community, and stay motivated together.</p>
+      </div>
+      <div class="traditional-card p-6 text-center">
+        <div class="text-3xl mb-3">💰</div>
+        <h3 class="font-bold text-accent-400 mb-2">Best Value</h3>
+        <p class="text-sm text-gray-200">Offline group classes at just ₹800/month — the most affordable way to learn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="section-gradient-1 py-8">
+  <div class="container-custom">
+    <h2 class="text-xl font-bold text-center mb-4 text-accent-400">Find Our Studio</h2>
+    <p class="text-center text-gray-300 text-sm mb-6">Little Millennium Play School, Pudur, Ambattur, Chennai 600053</p>
     <div class="rounded-2xl overflow-hidden glow-maroon">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.234!2d80.234567!3d13.056789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzI0LjQiTiA4MMKwMTQnMDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+        src="https://maps.google.com/maps?q=Shivam+Narthanalayam,Pudur,Ambattur,Chennai,Tamil+Nadu&t=&z=16&ie=UTF8&iwloc=&output=embed"
         width="100%"
         height="400"
         style="border:0;"
