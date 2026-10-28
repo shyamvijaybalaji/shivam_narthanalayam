@@ -126,8 +126,11 @@
       isValid = false;
     }
 
-    // Validate phone (optional, but if provided must be valid)
-    if (leadData.phone && leadData.phone.trim()) {
+    // Validate phone (required)
+    if (!leadData.phone || !leadData.phone.trim()) {
+      leadErrors.phone = 'Phone number is required';
+      isValid = false;
+    } else {
       const phoneRegex = /^[0-9+\-\s()]+$/;
       const cleanPhone = leadData.phone.trim();
 
@@ -331,7 +334,7 @@
             <input
               type="tel"
               bind:value={leadData.phone}
-              placeholder="Phone Number (Optional)"
+              placeholder="Phone Number *"
               class="w-full px-3 py-2 rounded-lg border text-sm text-gray-900 {leadErrors.phone ? 'border-red-500' : 'border-secondary-300'}"
             />
             {#if leadErrors.phone}
