@@ -75,7 +75,7 @@ export async function getChatbotResponse(userMessage: string, conversationHistor
     ];
 
     const response = await getClient().chat.completions.create({
-      model: 'gpt-4',
+      model: 'gpt-4o',
       messages: messages as any,
       temperature: 0.7,
       max_tokens: 500
