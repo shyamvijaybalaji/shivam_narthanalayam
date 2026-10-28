@@ -13,6 +13,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	const response = await resolve(event);
 
+	// HTML must never be cached so browsers always load the latest JS bundle hashes
+	if (response.headers.get('content-type')?.includes('text/html')) {
+		response.headers.set('Cache-Control', 'no-cache');
+	}
+
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 	response.headers.set('X-Frame-Options', 'SAMEORIGIN');
 	response.headers.set('X-XSS-Protection', '1; mode=block');
