@@ -135,7 +135,7 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="text-center">
               <p class="text-sm text-secondary-600 mb-1">Monthly Fee</p>
-              <p class="text-3xl font-bold text-primary-600">₹800</p>
+              <p class="text-3xl font-bold text-primary-600">₹1,000</p>
             </div>
             <div class="text-center">
               <p class="text-sm text-secondary-600 mb-1">Trial Class</p>
