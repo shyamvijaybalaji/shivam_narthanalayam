@@ -12,6 +12,7 @@
   let collectingLead = false;
   let leadData = {
     name: '',
+    age: '',
     email: '',
     phone: '',
     preferredClassType: ''
@@ -185,7 +186,7 @@
       ];
 
       collectingLead = false;
-      leadData = { name: '', email: '', phone: '', preferredClassType: '' };
+      leadData = { name: '', age: '', email: '', phone: '', preferredClassType: '' };
       leadErrors = { name: '', email: '', phone: '' };
 
       // Refocus chat input after lead submission
@@ -301,6 +302,17 @@
             {#if leadErrors.name}
               <p class="text-xs text-red-600 mt-1">{leadErrors.name}</p>
             {/if}
+          </div>
+
+          <div>
+            <input
+              type="number"
+              bind:value={leadData.age}
+              placeholder="Age (Optional)"
+              min="3"
+              max="99"
+              class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
+            />
           </div>
 
           <div>

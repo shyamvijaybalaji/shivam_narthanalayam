@@ -18,6 +18,7 @@ export const POST: RequestHandler = async ({ request }) => {
         name: leadData.name,
         email: leadData.email,
         phone: leadData.phone && leadData.phone.trim() ? leadData.phone.trim() : undefined,
+        age: leadData.age ? String(leadData.age).trim() : undefined,
         message: leadData.conversation || message,
         preferred_class_type: leadData.preferredClassType,
         source: 'chatbot'
@@ -39,6 +40,7 @@ export const POST: RequestHandler = async ({ request }) => {
         name: leadData.name,
         email: leadData.email,
         phone: leadData.phone,
+        age: leadData.age ? String(leadData.age).trim() : undefined,
         preferredClassType: leadData.preferredClassType,
         conversation: leadData.conversation || message
       });
