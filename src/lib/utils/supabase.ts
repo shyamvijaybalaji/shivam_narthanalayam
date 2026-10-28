@@ -28,6 +28,7 @@ export interface Enquiry {
   name: string;
   email: string;
   phone?: string;
+  age?: string;
   message?: string;
   preferred_class_type?: string;
   country?: string;
@@ -68,6 +69,7 @@ export async function submitEnquiry(enquiry: Enquiry) {
       name: enquiry.name,
       email: enquiry.email,
       phone: enquiry.phone,
+      age: enquiry.age,
       message: enquiry.message,
       preferred_class_type: enquiry.preferred_class_type,
       country: enquiry.country,

@@ -117,7 +117,7 @@
           <table>
             <thead>
               <tr>
-                <th>Date</th><th>Name</th><th>Email</th><th>Phone</th>
+                <th>Date</th><th>Name</th><th>Age</th><th>Email</th><th>Phone</th>
                 <th>Country</th><th>Class</th><th>Source</th><th>Message</th>
               </tr>
             </thead>
@@ -126,6 +126,7 @@
                 <tr>
                   <td class="nowrap">{fmt(e.created_at)}</td>
                   <td>{e.name}</td>
+                  <td>{e.age ?? "—"}</td>
                   <td><a href="mailto:{e.email}">{e.email}</a></td>
                   <td>{e.phone ?? "—"}</td>
                   <td>{e.country ?? "—"}</td>

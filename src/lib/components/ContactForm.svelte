@@ -7,6 +7,7 @@
   let message = '';
   let preferredClassType = '';
   let country = '';
+  let age = '';
   let isSubmitting = false;
   let submitStatus: 'idle' | 'success' | 'error' = 'idle';
   let errorMessage = '';
@@ -31,6 +32,7 @@
           email,
           phone,
           country,
+          age,
           message,
           preferredClassType
         })
@@ -54,6 +56,7 @@
       message = '';
       preferredClassType = '';
       country = '';
+      age = '';
 
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -125,6 +128,22 @@
       bind:value={country}
       class="input-field w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-200 transition-colors"
       placeholder="e.g. India, Finland, Philippines"
+    />
+  </div>
+
+  <!-- Age Field -->
+  <div>
+    <label for="age" class="block text-sm font-medium mb-2 text-gray-200">
+      Age
+    </label>
+    <input
+      type="number"
+      id="age"
+      bind:value={age}
+      min="3"
+      max="99"
+      class="input-field w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-200 transition-colors"
+      placeholder="e.g. 8, 25, 35"
     />
   </div>
 

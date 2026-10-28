@@ -35,6 +35,7 @@ export const POST: RequestHandler = async ({ request }) => {
       email: data.email.trim(),
       phone: data.phone && data.phone.trim() ? data.phone.trim() : undefined,
       country: data.country && data.country.trim() ? data.country.trim() : undefined,
+      age: data.age ? String(data.age).trim() : undefined,
       message: data.message.trim(),
       preferred_class_type: data.preferredClassType,
       source: 'contact_form'
@@ -50,6 +51,7 @@ export const POST: RequestHandler = async ({ request }) => {
       email: data.email.trim(),
       phone: data.phone?.trim(),
       country: data.country?.trim(),
+      age: data.age ? String(data.age).trim() : undefined,
       message: data.message.trim(),
       preferredClassType: data.preferredClassType
     });
