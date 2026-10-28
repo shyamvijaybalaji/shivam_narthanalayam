@@ -37,12 +37,13 @@ OFFLINE GROUP CLASSES:
 
 ONLINE ONE-TO-ONE CLASSES:
 - Platform: Zoom
-- Schedule: Flexible timing arranged with student
+- Schedule: Fully flexible — timing arranged individually with each student based on their timezone and availability
 - Frequency: 8 classes/month (typically 2x per week)
 - Fee: ₹1,000/month
 
 ONLINE GROUP CLASSES:
 - Platform: Zoom
+- Schedule: Fully flexible — timing coordinated with the group based on students' timezones (India, Gulf, Europe, etc.)
 - Frequency: 4 classes/month
 - Fee: ₹1,000/month
 - Trial Class: FREE 1 demo class

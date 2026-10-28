@@ -97,9 +97,11 @@
           <div class="traditional-card p-6">
             <h3 class="font-bold mb-3 text-accent-400">Class Timings</h3>
             <div class="space-y-2 text-sm text-gray-200">
-              <p><strong>Batch 1:</strong> Tue & Thu, 5:00-6:30 PM</p>
-              <p><strong>Batch 2:</strong> Sat & Sun, 5:00-6:30 PM</p>
-              <p><strong>Online:</strong> Flexible timing</p>
+              <p class="font-medium text-accent-300">Offline (Studio, Pudur)</p>
+              <p><strong>Batch 1:</strong> Tue & Thu, 5:00–6:30 PM IST</p>
+              <p><strong>Batch 2:</strong> Sat & Sun, 5:00–6:30 PM IST</p>
+              <p class="font-medium text-accent-300 mt-2">Online (Zoom)</p>
+              <p>Flexible — arranged based on your timezone</p>
             </div>
           </div>
         </div>

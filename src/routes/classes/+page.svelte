@@ -116,14 +116,9 @@
 
         <div class="mb-6">
           <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">📅 Class Timings</h4>
-          <div class="space-y-2">
-            {#each offlineBatches as batch}
-              <div class="bg-black p-3 rounded-lg">
-                <p class="font-bold text-primary-600">{batch.name}</p>
-                <p class="text-sm">{batch.days}</p>
-                <p class="text-sm text-secondary-600">{batch.time}</p>
-              </div>
-            {/each}
+          <div class="bg-black p-4 rounded-lg">
+            <p class="font-bold text-accent-400 mb-1">Flexible — arranged with your group</p>
+            <p class="text-sm text-gray-300">Timing is coordinated based on students' timezones and availability. Suitable for India, Gulf, Europe, and beyond.</p>
           </div>
         </div>
 
@@ -131,7 +126,7 @@
           <h4 class="text-lg font-semibold mb-2" style="color: #d1d5db;">✨ Benefits</h4>
           <ul class="list-disc pl-6 space-y-1 text-sm">
             <li>Learn from anywhere in the world</li>
-            <li>Same schedule as offline classes</li>
+            <li>Timing suited to your timezone</li>
             <li>Interactive group learning</li>
           </ul>
         </div>
