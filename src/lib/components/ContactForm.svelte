@@ -166,6 +166,7 @@
     >
       <option value="">Select a class type</option>
       <option value="offline">Offline Group Classes (Studio, Pudur, Chennai)</option>
+      <option value="online_group">Online Group Classes</option>
       <option value="online">Online One-to-One Classes</option>
       <option value="both">Both (I'd like to know more)</option>
     </select>

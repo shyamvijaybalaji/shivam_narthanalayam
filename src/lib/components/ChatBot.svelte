@@ -348,6 +348,7 @@
           >
             <option value="">Preferred Class Type (Optional)</option>
             <option value="offline">Offline Group Classes</option>
+            <option value="online_group">Online Group Classes</option>
             <option value="online">Online One-to-One</option>
           </select>
 
