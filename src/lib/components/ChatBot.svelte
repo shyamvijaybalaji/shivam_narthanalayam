@@ -311,7 +311,7 @@
             <input
               type="number"
               bind:value={leadData.age}
-              placeholder="Age (Optional)"
+              placeholder="Age"
               min="3"
               max="99"
               class="w-full px-3 py-2 rounded-lg border border-secondary-300 text-sm text-gray-900"
