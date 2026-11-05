@@ -1,0 +1,27 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Every 3 days at 06:00 UTC (11:30 AM IST) — prevents Supabase free-tier pause (7-day inactivity threshold)
+    - cron: '0 6 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        env:
+          # anon key is public — it's already in the client-side JS bundle
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh3ZXpvZm5jem5jb3poeGpiaWpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTU5ODUsImV4cCI6MjA4Mjk3MTk4NX0.RsDilT-B7PWfHymI0eZfz3W3SWHve5_iUO841Ci4luM
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://xwezofnczncozhxjbijr.supabase.co/rest/v1/enquiries?select=id&limit=1" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "Supabase ping status: $STATUS"
+          if [ "$STATUS" -ge 400 ]; then
+            echo "❌ Unexpected status $STATUS"
+            exit 1
+          fi
+          echo "✅ Supabase is alive"
