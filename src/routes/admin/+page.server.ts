@@ -2,6 +2,7 @@ import { redirect } from "@sveltejs/kit";
 import { env } from "$env/dynamic/private";
 import { PUBLIC_SUPABASE_URL } from "$env/static/public";
 import { createClient } from "@supabase/supabase-js";
+import { verifyToken } from "./login/+page.server";
 import type { PageServerLoad, Actions } from "./$types";
 
 function getAdminSupabase() {
@@ -10,7 +11,7 @@ function getAdminSupabase() {
 
 export const load: PageServerLoad = async ({ cookies }) => {
   const session = cookies.get("admin_session");
-  if (!session || session !== "authenticated") {
+  if (!session || !env.ADMIN_SECRET || !verifyToken(session, env.ADMIN_SECRET)) {
     throw redirect(302, "/admin/login");
   }
 
