@@ -1,27 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
-import { createHmac, randomBytes, timingSafeEqual } from 'crypto';
+import { mintToken } from '$lib/utils/adminAuth';
 import { checkRateLimit } from '$lib/utils/rateLimit';
 import type { Actions } from './$types';
-
-function mintToken(secret: string): string {
-  const nonce = randomBytes(24).toString('hex');
-  const sig = createHmac('sha256', secret).update(nonce).digest('hex');
-  return `${nonce}.${sig}`;
-}
-
-export function verifyToken(token: string, secret: string): boolean {
-  const dot = token.lastIndexOf('.');
-  if (dot === -1) return false;
-  const nonce = token.slice(0, dot);
-  const sig = token.slice(dot + 1);
-  const expected = createHmac('sha256', secret).update(nonce).digest('hex');
-  try {
-    return timingSafeEqual(Buffer.from(sig, 'hex'), Buffer.from(expected, 'hex'));
-  } catch {
-    return false;
-  }
-}
 
 export const actions: Actions = {
   default: async ({ request, cookies, getClientAddress }) => {
@@ -43,7 +24,7 @@ export const actions: Actions = {
       const token = mintToken(env.ADMIN_SECRET);
       cookies.set('admin_session', token, {
         path: '/',
-        maxAge: 60 * 60 * 24 * 7, // 7 days
+        maxAge: 60 * 60 * 24 * 7,
         httpOnly: true,
         secure: true,
         sameSite: 'strict'

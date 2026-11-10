@@ -2,7 +2,7 @@ import { redirect } from "@sveltejs/kit";
 import { env } from "$env/dynamic/private";
 import { PUBLIC_SUPABASE_URL } from "$env/static/public";
 import { createClient } from "@supabase/supabase-js";
-import { verifyToken } from "./login/+page.server";
+import { verifyToken } from "$lib/utils/adminAuth";
 import type { PageServerLoad, Actions } from "./$types";
 
 function getAdminSupabase() {
