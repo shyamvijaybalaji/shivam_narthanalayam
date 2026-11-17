@@ -10,18 +10,30 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase
-        env:
-          # anon key is public — it's already in the client-side JS bundle
-          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh3ZXpvZm5jem5jb3poeGpiaWpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczOTU5ODUsImV4cCI6MjA4Mjk3MTk4NX0.RsDilT-B7PWfHymI0eZfz3W3SWHve5_iUO841Ci4luM
+      - name: Setup SSH
         run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://xwezofnczncozhxjbijr.supabase.co/rest/v1/enquiries?select=id&limit=1" \
-            -H "apikey: $SUPABASE_ANON_KEY" \
-            -H "Authorization: Bearer $SUPABASE_ANON_KEY")
-          echo "Supabase ping status: $STATUS"
-          if [ "$STATUS" -ge 400 ]; then
-            echo "❌ Unexpected status $STATUS"
-            exit 1
-          fi
-          echo "✅ Supabase is alive"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H 72.61.233.12 >> ~/.ssh/known_hosts
+
+      - name: Ping Supabase via VPS (service role key bypasses RLS — ensures real DB query)
+        run: |
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no root@72.61.233.12 bash << 'ENDSSH'
+            set -e
+            source /var/www/shivam_narthanalayam/.env
+            RESPONSE=$(curl -s -w "\n%{http_code}" \
+              "https://xwezofnczncozhxjbijr.supabase.co/rest/v1/enquiries?select=id&limit=1" \
+              -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+              -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+              -H "Prefer: count=exact")
+            STATUS=$(echo "$RESPONSE" | tail -1)
+            BODY=$(echo "$RESPONSE" | head -1)
+            echo "Supabase ping status: $STATUS"
+            echo "Response body: $BODY"
+            if [ "$STATUS" -ge 400 ]; then
+              echo "❌ Supabase ping failed — project may be paused or key is invalid"
+              exit 1
+            fi
+            echo "✅ Supabase is alive and DB query executed"
+          ENDSSH

@@ -63,7 +63,7 @@ export async function submitContactForm(data: ContactFormData) {
 export async function submitEnquiry(enquiry: Enquiry) {
   const supabase = getSupabaseClient();
 
-  const { data, error } = await supabase
+  const { error } = await supabase
     .from('enquiries')
     .insert([{
       name: enquiry.name,
@@ -75,13 +75,12 @@ export async function submitEnquiry(enquiry: Enquiry) {
       country: enquiry.country,
       source: enquiry.source || 'contact_form',
       created_at: new Date().toISOString()
-    }])
-    .select();
+    }]);
 
   if (error) {
     console.error('Supabase insert error:', error);
     return { success: false, error: error.message };
   }
 
-  return { success: true, data };
+  return { success: true };
 }
